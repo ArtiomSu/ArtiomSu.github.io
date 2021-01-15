@@ -11,3 +11,18 @@ html {
     margin: 0;
     height: 100%;
 }
+
+.actionsbtn {
+    border: none;
+    background-color: darkred;
+    color: #ef741b;
+    padding: 2em;
+    margin-right: 10px;
+    transition: background-color 2s, color 3s;
+    margin-bottom: 10px;
+}
+
+.actionsbtn:hover{
+    background-color: #ef741b;
+    color: darkred;
+}
