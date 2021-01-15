@@ -35,11 +35,11 @@ $(document).ready(function(){
             canvas_opacity = canvas_opacity - 0.015;
             counter_opacity--;
 
-            if(headerProgressBarInner_width <= 110){
+            if(headerProgressBarInner_width <= 100){
                 headerProgressBarInner.width(headerProgressBarInner_width+'%');
                 headerProgressBarInner_width++;
             }else {
-                headerProgressBarInner.animate({"margin-left": '100%'});
+                headerProgressBarInner.animate({"opacity": '0%'});
             }
         }
 
