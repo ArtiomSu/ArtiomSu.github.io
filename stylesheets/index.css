@@ -1,15 +1,46 @@
+:root {
+    --footer_height: 100px;
+
+}
+
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     background-color: #111111;
     height: 100%;
     padding: 0;
     margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 html {
     padding: 0;
     margin: 0;
     height: 100%;
+}
+
+#container {
+    min-height:100%;
+    position:relative;
+}
+#header {
+    background: rgba(0, 0, 0, 0.7);
+    padding:5px;
+    text-align: center;
+}
+#body {
+    padding:10px;
+    margin-left: 20px;
+    padding-bottom: var(--footer_height);   /* Height of the footer */
+}
+#footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height: var(--footer_height);   /* Height of the footer */
+    padding-left: 20px;
+    padding-bottom: 20px;
+    color: brown;
 }
 
 .actionsbtn {
@@ -25,4 +56,29 @@ html {
 .actionsbtn:hover{
     background-color: #ef741b;
     color: darkred;
+}
+
+.headerh1 {
+    color: #ef741b;
+}
+
+#matrix_canvas{
+    z-index: -1;
+    position: absolute;
+
+}
+
+h1{
+    color: darkred;
+}
+
+#headerProgressBar{
+    width: 100%;
+    height: 2px;
+}
+
+#headerProgressBarInner{
+    width: 0%;
+    height: 2px;
+    background-color: rgba(239, 116, 17, 0.5);
 }
