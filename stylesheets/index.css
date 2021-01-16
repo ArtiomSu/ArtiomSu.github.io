@@ -54,7 +54,7 @@ html {
 }
 
 .actionsbtn:hover{
-    background-color: #ef741b;
+    background-color: rgba(239,116,27,0.7);
     color: darkred;
 }
 
