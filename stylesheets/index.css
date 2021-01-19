@@ -66,12 +66,16 @@ html {
 
 .headerh1 {
     color: #ef741b;
-    background-color: rgba(0,0,0,0.7);
     padding: 5px;
     margin: 0px;
     margin-top: -5px;
     text-align: left;
     margin-left: 40%;
+}
+
+#header_containder{
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
 }
 
 #matrix_canvas{
