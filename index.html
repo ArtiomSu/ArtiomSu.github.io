@@ -5,28 +5,39 @@
     <title>ArtiomSu</title>
     <link rel = "stylesheet" type = "text/css" href = "/stylesheets/index.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="/javascripts/index.js"></script>
 </head>
 <body>
     <canvas id="matrix_canvas"></canvas>
     <div id="container">
         <div id="header">
-            <h1 class="headerh1">Projects</h1>
-        </div>
-        <div id="headerProgressBar">
-            <div id="headerProgressBarInner"></div>
+            <h1 class="headerh1">ArtiomSu</h1>
+
+            <div id="headerProgressBar">
+                <div id="headerProgressBarInner"></div>
+            </div>
+            <div id="matrix_colour_btns_div_container">
+                <button class="matrix_colour_btns" id="matrix_canvas_theme">&nbsp;&nbsp;Themes</button>
+                <button class="matrix_colour_btns" id="matrix_canvas_orange">Amber</button>
+                <button class="matrix_colour_btns" id="matrix_canvas_red">Red</button>
+                <button class="matrix_colour_btns" id="matrix_canvas_blue">Blue</button>
+                <button class="matrix_colour_btns" id="matrix_canvas_green">Green</button>
+                <button class="matrix_colour_btns" id="matrix_canvas_rainbow">Glitchy</button>
+            </div>
         </div>
         <div id="body">
 
-            <h1>Set Matrix Rain Background Colour</h1>
-            <button class="actionsbtn" id="matrix_canvas_orange">Amber</button>
-            <button class="actionsbtn" id="matrix_canvas_red">Red</button>
-            <button class="actionsbtn" id="matrix_canvas_blue">Blue</button>
-            <button class="actionsbtn" id="matrix_canvas_green">Green</button>
-            <button class="actionsbtn" id="matrix_canvas_rainbow">Glitchy</button>
+<!--            <h1>Test</h1>-->
+<!--            <button class="actionsbtn" onclick="window.location.href = '/test.html';">Test html</button>-->
 
-            <h1>Test</h1>
-            <button class="actionsbtn" onclick="window.location.href = '/test.html';">Test html</button>
+            <div class="topic_selector_div">
+                <button class="actionsbtn" id="container_asusrogphonergb">Asus Rog Phone RGB</button>
+                <button class="actionsbtn" id="container_dynamicrypt">DynamiCrypt</button>
+                <button class="actionsbtn" id="container_qmk">QMK</button>
+            </div>
+
+            <div id="containers"></div>
 
         </div>
         <div id="footer">
