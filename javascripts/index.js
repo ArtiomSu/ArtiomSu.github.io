@@ -15,12 +15,34 @@ $(document).ready(function(){
 
     var matrix_text_colour = '#ef741b';
     var rainbow_matrix = false;
+    var run_matrix = true;
 
+
+    document.body.onkeydown = function (e) {
+        e = e || window.event;
+        if ("key" in e){  // Gecko (Firefox), WebKit (Safari/Chrome) & Opera
+            if(e.key === 'm' || e.key === 'M'){
+                run_matrix = !run_matrix;
+            }
+        }
+    }
+
+    if(getCookie("matrix_colour") !== ""){
+        var matrix_colour = getCookie("matrix_colour");
+        if(matrix_colour === "rainbow"){
+            rainbow_matrix = true;
+        }else{
+            matrix_text_colour=matrix_colour;
+        }
+    }
 
 
     var drawMatrix = function () {
         matrix_canvas.getContext('2d').fillStyle='rgba(0,0,0,.1)';
         matrix_canvas.getContext('2d').fillRect(0,0,width,height);
+        if(!run_matrix){
+            return 0;
+        }
         matrix_canvas.getContext('2d').fillStyle=matrix_text_colour;
         letters.map(function(y_pos, index){
             text = String.fromCharCode(3e4+Math.random()*33);
@@ -65,26 +87,31 @@ $(document).ready(function(){
     $("#matrix_canvas_orange").hover(function(){
         matrix_text_colour = '#ef741b';
         rainbow_matrix = false;
+        setCookie("matrix_colour",matrix_text_colour,30);
     }, function (){
     });
     $("#matrix_canvas_red").hover(function(){
         matrix_text_colour = '#78080b';
         rainbow_matrix = false;
+        setCookie("matrix_colour",matrix_text_colour,30);
     }, function (){
     });
     $("#matrix_canvas_blue").hover(function(){
         matrix_text_colour = '#102c8e';
         rainbow_matrix = false;
+        setCookie("matrix_colour",matrix_text_colour,30);
     }, function (){
     });
     $("#matrix_canvas_green").hover(function(){
         matrix_text_colour = '#379a0b';
         rainbow_matrix = false;
+        setCookie("matrix_colour",matrix_text_colour,30);
     }, function (){
     });
     $("#matrix_canvas_rainbow").hover(function(){
         matrix_text_colour = '#ef741b';
         rainbow_matrix = true;
+        setCookie("matrix_colour","rainbow",30);
     }, function (){
     });
 
@@ -125,42 +152,3 @@ $(document).ready(function(){
 
 
 });
-
-function animate_get_container(container_name,div_id){
-    httpGetAsync("/containers/"+container_name,animate_get_container_callback,div_id);
-}
-
-function animate_get_container_callback(html,div_id){
-    $("#"+div_id).animate({opacity:"0%",marginTop:"150px"},600,function (){
-        // var window_before = $(window).height();
-        // console.log("window height before:",window_before);
-        $("#"+div_id).html(html);
-        //console.log("window height after:",$(window).height());
-        $("#"+div_id).css("height",$(window).height()-containers_div_offset);
-        //document.getElementById(div_id).innerHTML = html;
-        $("#"+div_id).animate({opacity:"100%",marginTop:"0px"},600,function (){
-            //$('#'+div_id).attr('overflowy','scroll');
-        });
-    });
-}
-
-
-function get_container(container_name,div_id){
-    httpGetAsync("/containers/"+container_name,get_container_callback,div_id);
-}
-
-function get_container_callback(html,div_id){
-    $("#"+div_id).html(html);
-    //document.getElementById(div_id).innerHTML = html;
-}
-
-function httpGetAsync(theUrl, callback,div_id)
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function() {
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-            callback(xmlHttp.responseText,div_id);
-    }
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous
-    xmlHttp.send(null);
-}

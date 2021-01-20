@@ -48,6 +48,7 @@ html {
     padding: 0px;
     color: brown;
     text-align: center;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 80%, rgba(0,0,0,0));
 }
 
 .actionsbtn {

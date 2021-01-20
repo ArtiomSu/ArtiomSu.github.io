@@ -9,35 +9,61 @@ $(document).ready(function(){
     var youtube_div_names = ["container_Youtube1", "container_Youtube2", "container_Youtube3", "container_Youtube4", "container_Youtube5", "container_Youtube6", "container_Youtube7", "container_Youtube8", "container_Youtube9", "container_Youtube10", "container_Youtube11", "container_Youtube12", "container_Youtube13", "container_Youtube14"];
 
 
-
-
     $("#container_home").click(function (){
         expand_collapse_categories("#container_home",null);
         animate_get_container("Home.html","containers");
+        urlInsertParam("cat","container_home");
+        urlInsertParam("catonly",1);
     });
-
-
-
 
     //projects
     $("#container_Projects").click(function (){
         expand_collapse_categories("#container_Projects",projects_div_names);
+        urlInsertParam("cat","container_Projects");
+        urlInsertParam("catonly",1);
     });
     $("#container_asusrogphonergb").click(function (){
         sub_categorie_click("AsusRogPhoneRGB.html","containers", "#container_asusrogphonergb");
+        urlInsertParam("item","container_asusrogphonergb");
+        urlInsertParam("catonly",0);
     });
     $("#container_dynamicrypt").click(function (){
         sub_categorie_click("DynamiCrypt.html","containers", "#container_dynamicrypt");
+        urlInsertParam("item","container_dynamicrypt");
+        urlInsertParam("catonly",0);
     });
     $("#container_qmk").click(function (){
         sub_categorie_click("QMK.html","containers", "#container_qmk");
+        urlInsertParam("item","container_qmk");
+        urlInsertParam("catonly",0);
     });
 
 
     //youtube
     $("#container_Youtube").click(function (){
         expand_collapse_categories("#container_Youtube",youtube_div_names);
+        urlInsertParam("cat","container_Youtube");
+        urlInsertParam("catonly",1);
     });
+
+    //deal with cookies
+    var last_visited_href = getCookie("last_visited");
+    if ( last_visited_href !== ""){
+        window.history.pushState({path:last_visited_href},'',last_visited_href);
+    }
+
+
+    //deal with url params
+    var urlParams = new URLSearchParams(window.location.search);
+    if(urlParams.has("cat")){
+        console.log(urlParams.get("cat"));
+        $("#"+urlParams.get("cat")).click();
+    }
+    if(urlParams.has("item") && urlParams.has("catonly")){
+        if(urlParams.get("catonly") === "0"){
+            $("#"+urlParams.get("item")).click();
+        }
+    }
 
 });
 
