@@ -1,3 +1,5 @@
+var containers_div_offset = 150;
+
 $(document).ready(function(){
     var matrix_canvas = document.getElementById('matrix_canvas');
     var headerProgressBarInner = $('#headerProgressBarInner');
@@ -112,24 +114,12 @@ $(document).ready(function(){
 
 
 
-    get_container("AsusRogPhoneRGB.html","containers");
-
-    //html containers
-    $("#container_asusrogphonergb").click(function (){
-        animate_get_container("AsusRogPhoneRGB.html","containers");
-    });
-    $("#container_dynamicrypt").click(function (){
-        animate_get_container("DynamiCrypt.html","containers");
-    });
-    $("#container_qmk").click(function (){
-        animate_get_container("QMK.html","containers");
-    });
-
-
-
+    get_container("Home.html","containers");
+    $("#categorieselector").css("height",$(window).height()-containers_div_offset);
 
     $(window).resize(function() {
-        $("#containers").css("height",$(window).height()-320);
+        $("#containers").css("height",$(window).height()-containers_div_offset);
+        $("#categorieselector").css("height",$(window).height()-containers_div_offset);
     });
 
 
@@ -141,14 +131,14 @@ function animate_get_container(container_name,div_id){
 }
 
 function animate_get_container_callback(html,div_id){
-    $("#"+div_id).animate({opacity:"0%",marginLeft:"150px"},600,function (){
-        var window_before = $(window).height();
-        console.log("window height before:",window_before);
+    $("#"+div_id).animate({opacity:"0%",marginTop:"150px"},600,function (){
+        // var window_before = $(window).height();
+        // console.log("window height before:",window_before);
         $("#"+div_id).html(html);
-        console.log("window height after:",$(window).height());
-        $("#"+div_id).css("height",$(window).height()-320);
+        //console.log("window height after:",$(window).height());
+        $("#"+div_id).css("height",$(window).height()-containers_div_offset);
         //document.getElementById(div_id).innerHTML = html;
-        $("#"+div_id).animate({opacity:"100%",marginLeft:"0px"},600,function (){
+        $("#"+div_id).animate({opacity:"100%",marginTop:"0px"},600,function (){
             //$('#'+div_id).attr('overflowy','scroll');
         });
     });
