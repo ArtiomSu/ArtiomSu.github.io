@@ -1,0 +1,220 @@
+<div>
+
+    <div id="links">
+        <div class="links_text">Source Code</div>
+        <img class="logo" src="/images/github.png" alt="github link" onclick="window.open('https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse', '_blank');">
+        <div class="links_text">Videos</div>
+        <img class="logo" src="/images/YoutubeLogo.png" alt="Youtube link" onclick="window.open('https://www.youtube.com/c/TerminalHeatSink', '_blank');">
+        <div class="links_text">Code</div>
+        <button class="iteminnerbutton selcet_container_arduinocustommousecode">Guide</button>
+    </div>
+
+    <div class="two_pics_div">
+        <a data-fancybox="gallery" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/21.jpg"><img class="two_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/21.jpg"></a>
+        <a data-fancybox="gallery" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/20.jpg"><img class="two_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/20.jpg"></a>
+    </div>
+
+    <div class="text_standard">
+        <p>Welcome to the Arduino Custom Multilayer Mouse Build Guide. To view the code guide press the red button on the top next to the Github source code and Youtube videos links. You can click on the images to zoom in for a better look.</p>
+        <h2>What is Arduino Custom Multilayer Mouse?</h2>
+        <p>As you can see by the photos above this custom mouse uses a joystick to move the cursor and 4 additional buttons for other actions. I used cherry MX blues as I have some left over from my keyboard build</p>
+        <p>The Multilayer aspect allows you to have 3 different layers based on the state of the 4th key. This is similiar to QMK if you are familiar with that. Currently there are 3 layers see table bellow</p>
+        <p>Also pressing the joystick button will reset the mouse to defaults this is handy if you want to quickly turn off the autoclickers</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Layer</th>
+                    <th>Button 1</th>
+                    <th>Button 2</th>
+                    <th>Button 3</th>
+                    <th>Button 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Normal</td>
+                    <td>left click</td>
+                    <td>right click</td>
+                    <td>middle click</td>
+                    <td>hold=Shifted, press=Special</td>
+                </tr>
+                <tr>
+                    <td>Shifted</td>
+                    <td>browser back</td>
+                    <td>browser forward</td>
+                    <td>toggle auto clicker*</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Special</td>
+                    <td>scroll up</td>
+                    <td>scroll down</td>
+                    <td>toggle afk auto clicker*</td>
+                    <td>hold=Shifted, press=Normal</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">
+                        toggle auto clicker* when enabled buttons 1-3 in Normal layer will repeat when held down for around 30 clicks per second
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        toggle afk auto clicker* when enabled the left click will keep on spamming non stop at around 30 clicks per second
+                    </td>
+            </tr>
+            </tfoot>
+        </table>
+        <p>Note: Button 1 is the closest button to the joystick</p>
+        <p>Basically if you hold button 4 you enter shifted layer. And if you press button 4 you will toggle between Special layer and Normal layer. If you connected an led to pin 4 if will blink while in Special layer.</p>
+        <p>Auto Clicking makes more sense if you watch the youtube video linked above and if you are familiar with software auto clickers this should make sense to you.</p>
+
+        <h2>Materials Needed</h2>
+        <p>Pro Micro USB ATmega 32U4 Arduino Leonardo ( 10 euro on ebay )</p>
+        <p>Joystick Arduino ( ~4 euro on ebay )</p>
+        <p>Jumper wire Cable Arduino Breadboard ( ~4 euro on ebay for pack of 40 )</p>
+        <p>Cherry MX Blue switches for buttons from an old keyboard or around 7 euro per 10 switches</p>
+        <p>Soldering Iron, Solder wire</p>
+        <p>Hot Glue Gun</p>
+        <p>Whatever tools needed to make the housing</p>
+        <p>pc with arduino studio installed (free)</p>
+
+        <h2>Housing/Shell</h2>
+        <p>I build the housing from a toilet paper roll and cardboard hot glued together. Then I covered the whole thing with plastic using my 3d pen to give is structure. Ideally this should be 3d printed but I don't have a 3d printer so this is how it is.</p>
+        <p>If you decide to make your own make sure you double check that the switches fit snugly otherwise you might have hot glue them in.</p>
+
+        <h2>Assembly</h2>
+    </div>
+
+    <div class="four_pics_div">
+        <a data-fancybox="gallery1" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/1.jpg"><img class="four_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/1.jpg"></a>
+        <a data-fancybox="gallery1" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/2.jpg"><img class="four_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/2.jpg"></a>
+        <a data-fancybox="gallery1" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/3.jpg"><img class="four_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/3.jpg"></a>
+        <a data-fancybox="gallery1" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/4.jpg"><img class="four_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/4.jpg"></a>
+    </div>
+
+    <div class="text_standard">
+        <p>For the assembly I will refer to the photos above the text.</p>
+        <p>We will start of by desoldering the pins on the joystick as otherwise it wont fit in the housing. Keep the desoldered pins as we will use them later on to connect all of the switches to ground.</p>
+        <p>During the soldering I have made a mistake and ripped some of the solder points from the pcb so I followed the traces and soldered directly to the points as you can see in the first photo</p>
+        <p>Ideally all of your pins should be soldered like in the second photo where I have only two pins soldered to the solder points.</p>
+        <p>After soldering the five wires you can hotglue the bottom of the pcb to prevent shorts and also to keep all the wires together.</p>
+        <h3>Joystick Pin out</h3>
+        <table>
+            <thead>
+            <tr>
+                <th>Connection on the Joystick</th>
+                <th>Wire Colour</th>
+                <th>Connection on the Arduino</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>GND</td>
+                <td>brown</td>
+                <td>GND</td>
+
+            </tr>
+            <tr>
+                <td>+5V</td>
+                <td>orange</td>
+                <td>VCC</td>
+            </tr>
+            <tr>
+                <td>VRx</td>
+                <td>red</td>
+                <td>A0</td>
+            </tr>
+            <tr>
+                <td>VRy</td>
+                <td>yellow</td>
+                <td>A1</td>
+            </tr>
+            <tr>
+                <td>SW</td>
+                <td>green</td>
+                <td>9</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+    </div>
+
+    <div class="four_pics_div">
+        <a data-fancybox="gallery2" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/5.jpg"><img class="four_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/5.jpg"></a>
+        <a data-fancybox="gallery2" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/6.jpg"><img class="four_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/6.jpg"></a>
+        <a data-fancybox="gallery2" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/7.jpg"><img class="four_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/7.jpg"></a>
+        <a data-fancybox="gallery2" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/8.jpg"><img class="four_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/8.jpg"></a>
+    </div>
+
+    <div class="text_standard">
+        <p>You can now insert the joystick into the housing. Dont worry about the switches just yet you can actually remove them from the housing as we will be soldering wires onto them later.</p>
+        <p>I used hot glue to keep the joystick in place as can be seen in photos 1 and 2.</p>
+        <p>I then covered the open space with my 3d pen for a more complete look.</p>
+        <p>Don't worry about getting the joystick in backwards but if you want to follow me I made sure that the pins on the joystick are facing towards the back. If you have yours facing away you can simply swap the joystick x,y variables in code later on.</p>
+    </div>
+
+    <div class="three_pics_div">
+        <a data-fancybox="gallery3" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/9.jpg"><img class="three_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/9.jpg"></a>
+        <a data-fancybox="gallery3" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/10.jpg"><img class="three_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/10.jpg"></a>
+        <a data-fancybox="gallery3" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/11.jpg"><img class="three_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/11.jpg"></a>
+    </div>
+
+    <div class="text_standard">
+        <p>We will now solder wires to the switches</p>
+        <p>One side of the switch will go to ground on the arduino, this is located near the vcc on mine. And the other side will go to an io pin on the arduino I used pins 5-8 as pin 9 is the joystick button</p>
+        <p>Since we have a lot of wires going to ground we will join them using the desoldered pins from the joystick as seen in the third photo. Strip a wire and solder it to all of the pins to connect them all</p>
+    </div>
+
+    <div class="three_pics_div">
+        <a data-fancybox="gallery4" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/12.jpg"><img class="three_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/12.jpg"></a>
+        <a data-fancybox="gallery4" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/13.jpg"><img class="three_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/13.jpg"></a>
+        <a data-fancybox="gallery4" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/14.jpg"><img class="three_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/14.jpg"></a>
+    </div>
+
+    <div class="text_standard">
+        <p>Insert all of the switched though the holes and you can push them in place</p>
+        <p>Next connect one side of the 4 switches together to the desoldered pins from the joystick discussed in the last paragraph. This can be seen in the third photo. Connect this to the ground pin on the arduino</p>
+        <p>Now you can connect the other side of the switches to pins 5-8 on the arduino. You can change these in code later on but if you want to follow exactly this is how I did it</p>
+        <p>pin 7 = switch 1, pin 8 = switch 2, pin 6 = switch 3 and pin 5 = switch 4.</p>
+    </div>
+
+    <div class="three_pics_div">
+        <a data-fancybox="gallery5" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/15.jpg"><img class="three_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/15.jpg"></a>
+        <a data-fancybox="gallery5" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/16.jpg"><img class="three_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/16.jpg"></a>
+        <a data-fancybox="gallery5" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/19.jpg"><img class="three_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/19.jpg"></a>
+    </div>
+
+    <div class="text_standard">
+        <p>You can now hot glue the arduino in place. A good trick is plug the arduino through the hole into the usb port and hot glue while plugged in. This will ensure a perfect connection.</p>
+        <p>At this point I added an indicator led for letting me know If I'm using the Special layer. If you want an led you can connect it to pin 4 and a spare ground pin on the arduino.</p>
+    </div>
+
+    <div class="text_standard">
+        The Build is now complete take a look at the <a href="" class="selcet_container_arduinocustommousecode green">Code Guide</a> to flash the firmware and edit the config.
+    </div>
+
+</div>
+<script>
+    console.log("asus rog phone rgb script");
+    var typed = new Typed('.headerh1', {
+        strings: ['$ Project','$ Project: Arduino Custom Multilayer Mouse'],
+        typeSpeed: 100,
+        showCursor: false,
+        smartBackspace: true,
+        backSpeed: 50
+    });
+
+    $(".selcet_container_arduinocustommousecode").click(function (){
+        click_container_arduinocustommousecode();
+        return false;
+    });
+</script>
+<style>
+    .green{
+        color: #379a0b;
+    }
+</style>

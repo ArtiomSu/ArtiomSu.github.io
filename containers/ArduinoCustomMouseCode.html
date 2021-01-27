@@ -1,0 +1,154 @@
+<div>
+
+    <div id="links">
+        <div class="links_text">Source Code</div>
+        <img class="logo" src="/images/github.png" alt="github link" onclick="window.open('https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse', '_blank');">
+        <div class="links_text">Videos</div>
+        <img class="logo" src="/images/YoutubeLogo.png" alt="Youtube link" onclick="window.open('https://www.youtube.com/c/TerminalHeatSink', '_blank');">
+        <div class="links_text">Build</div>
+        <button class="iteminnerbutton selcet_container_arduinocustommouse">Guide</button>
+    </div>
+
+    <div class="two_pics_div">
+        <a data-fancybox="gallery" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/21.jpg"><img class="two_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/21.jpg"></a>
+        <a data-fancybox="gallery" href="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/20.jpg"><img class="two_pics_pic" src="https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse/raw/master/screens/20.jpg"></a>
+    </div>
+
+    <div class="text_standard">
+        <p>Welcome to the Arduino Custom Multilayer Mouse Code Guide. To view the build guide press the red button on the top next to the Github source code and Youtube videos links. </p>
+        <p>Take a look at the build guide if you haven't already as it will let you know how the mouse works.</p>
+
+        <h2>Flashing Firmware</h2>
+        <p>You will need to download arduino IDE to compile and flash the firmware. This is a free program and is available in your repo if you are using linux. If You are on windows you can download it from the arduino website</p>
+        <p>Next you will need to clone my repo or download as zip through GitHub. The Github link is at the top of this page.</p>
+        <code>git clone https://github.com/ArtiomSu/Arduino_Custom_Multilayer_Mouse.git</code>
+
+        <p>Open arduino IDE. Click on file at the top right corner and click open... </p>
+        <p>navigate to where you downloaded the source code from github, select ArduinoCustomMouse.ino and press open</p>
+        <p>You should now see my code. Before we can compile we need to download the HID library.</p>
+        <p>Click on tools at the top and click on manage libraries. Search for HID-Project by NicoHood from the drop down select the most recent version and press install.</p>
+
+        <p>At the top of the file you should see the following code</p>
+        <code>
+            //#include &lt;Mouse.h&gt;
+            #include "HID-Project.h"
+            #include "arduinoCustomMouse.h" //all the global variables
+            //#define TESTING //Comment out to compile the prod code
+            //#define USESERIAL //comment out to get rid of serial
+        </code>
+        <p>We will compile the test firmware first this is where you can test if all the buttons are responding correctly</p>
+        <p>Replace the top of the file with the following to compile for testing</p>
+        <code>
+            //#include &lt;Mouse.h&gt;
+            #include "HID-Project.h"
+            #include "arduinoCustomMouse.h" //all the global variables
+            #define TESTING //Comment out to compile the prod code
+            #define USESERIAL //comment out to get rid of serial
+        </code>
+        <p>Plug in your arduino to the pc and in toold select port and check the only one available. Inside tools select the board to be arduino leonardo. And finally in tools click on Serial monitor</p>
+        <p>Now Click the right arrow on the top to compile and upload.</p>
+        <p>Now press each of the four buttons and see if all of them detect and if they detect as the right button. So for example the first button should say left click pressed and so on. If there are some buttons that need switching this can be done through code so don't worry look at the next part.</p>
+
+        <h2>Configuring</h2>
+        <p>Open arduinoCustomMouse.h You will see the following variables that you can change. Don't change anything else other than what is shown here unless you know what you are doing of course.</p>
+        <code>
+            //pins
+            int horzPin = A0;  // Analog output of horizontal joystick pin
+            int vertPin = A1;  // Analog output of vertical joystick pin
+            int selPin = 9;  // select button pin of joystick
+
+            int mouseLeftClickPin = 7;
+            int mouseRightClickPin = 8;
+            int mouseMiddleClickPin = 6;
+            int mouseModPin = 5;
+            int modLEDPin = 4;
+
+            //config settings (change these to whatever you want)
+            const int sensitivity = 10;  // Higher sensitivity value = slower mouse. Joystick sensitivity
+            const int mouse_slow_down_counter_delay = 20; // this will read joystick every 20th loop as other wise it is too fast and inacurate. joystick still feels smooth.
+            const int mouse_scroll_counter_delay = 20; //scroll speed. The higher the value the slower the scroll will be
+            const int afk_clicker_counter_delay = 15; //increase to slow down the auto clicker. min=15 anything lower and system will freeze.
+            const int led_counter_delay = 100; //How fast the led will blink when special mode is active. higher number = slower blink
+        </code>
+        <p>If your buttons are connected to different pins you can change these variables accordingly mouseLeftClickPin,mouseRightClickPin,mouseMiddleClickPin,mouseModPin</p>
+        <p>If your Joystick is reversed you can change int invertMouse = -1; to int invertMouse = 1 at the bottom of the file</p>
+        <p>To change the sensitivity of the joystick you will need to change sensitivity and mouse_slow_down_counter_delay play around with them until you get it just right. Don't increase mouse_slow_down_counter_delay past 20 as it will seem like the mouse is laggy</p>
+        <h3>Here is a table of the variables that you probably want to change to suit yourself.</h3>
+        <table>
+            <thead>
+            <tr>
+                <th>Variable Name</th>
+                <th>Default Value</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>sensitivity</td>
+                <td>10</td>
+                <td>increasing this will lower the range of the joystick as it will essentially be 512/10</td>
+
+            </tr>
+            <tr>
+                <td>mouse_slow_down_counter_delay</td>
+                <td>20</td>
+                <td>You can lower this to make the mouse more smooth but you will have to then increase sensitivity otherwise the mouse will be too fast.</td>
+            </tr>
+            <tr>
+                <td>mouse_scroll_counter_delay</td>
+                <td>20</td>
+                <td>This determines how fast the scroll speed is. lower value = Faster scrolling</td>
+            </tr>
+            <tr>
+                <td>afk_clicker_counter_delay</td>
+                <td>15</td>
+                <td>This determines how fast the auto clicker clicks. Setting this bellow 15 causes issues. If you want the auto clicker to run slower increase this value. At 15 I get around 30 clicks per second</td>
+            </tr>
+            <tr>
+                <td>led_counter_delay</td>
+                <td>100</td>
+                <td>This Determines how fast the led will blink. If you change this to 1000 it will blink twice every second</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+        <p>Note that after changing any variable you will need to compile and upload the code again so just press CTRL+S to save and then press the right arrow button to upload</p>
+
+        <h3>Compile Final Firmware</h3>
+        <p>After configuring and testing your settings you can compile the prod code which will give you access to all of the features</p>
+        <p>Open ArduinoCustomMouse again and at the top of the file comment out Testing and UseSerial like so</p>
+        <code>
+            //#define TESTING //Comment out to compile the prod code
+            //#define USESERIAL //comment out to get rid of serial
+        </code>
+        <p>Now press the upload button again and enjoy your custom mouse</p>
+
+    </div>
+
+    <div class="text_standard">
+        See the <a href="" class="selcet_container_arduinocustommouse green">Build Guide</a> if you haven't already to know what each layer does.
+    </div>
+
+
+</div>
+<script>
+    console.log("asus rog phone rgb script");
+    var typed = new Typed('.headerh1', {
+        strings: ['$ Project','$ Project: Arduino Custom Multilayer Mouse'],
+        typeSpeed: 100,
+        showCursor: false,
+        smartBackspace: true,
+        backSpeed: 50
+    });
+
+    $(".selcet_container_arduinocustommouse").click(function (){
+        click_container_arduinocustommouse();
+        return false;
+    });
+</script>
+<style>
+    .green{
+        color: #379a0b;
+    }
+</style>
