@@ -1,0 +1,140 @@
+<div>
+
+    <div id="links">
+        <div class="links_text">Source Code</div>
+        <img class="logo" src="/images/github.png" alt="github link" onclick="window.open('https://github.com/ArtiomSu/Asus-ROG-Phone-2-RGB', '_blank');">
+        <div class="links_text">Videos</div>
+        <img class="logo" src="/images/YoutubeLogo.png" alt="Youtube link" onclick="window.open('https://www.youtube.com/watch?v=8rNJtEDuV1I', '_blank');">
+        <div class="links_text">Play Store</div>
+        <img class="logo" src="/images/playstorelogo.png" alt="Play store link" onclick="window.open('https://play.google.com/store/apps/details?id=terminal_heat_sink.asusrogphone2rgb', '_blank');">
+        <div class="links_text">Xda thread</div>
+        <img class="logo" src="/images/xdalogo.png" alt="Play store link" onclick="window.open('https://forum.xda-developers.com/t/app-root-asus-rog-phone-2-rgb.4124299/', '_blank');">
+        <div class="links_text">Apk Download</div>
+        <img class="logo" src="/images/download_icon.png" alt="Play store link" onclick="window.open('https://github.com/ArtiomSu/Asus-ROG-Phone-2-RGB/releases', '_blank');">
+
+    </div>
+
+    <div id="links_internal">
+        <button class="iteminnerbuttonrogrgb selcet_container_asusrogphonergb">Overview</button>
+        <button class="iteminnerbuttonrogrgb selcet_container_asusrogphonergbreleases">Releases</button>
+        <button class="iteminnerbuttonrogrgb selcet_container_asusrogphonergbscreenshots">Screen shots</button>
+    </div>
+
+    <div class="text_standard">
+        <h2>Notifications</h2>
+        <p>Notification support is available from version 4 currently in beta and on the notifications branch.</p>
+        <p>To use the notifications</p>
+        <ol>
+            <li>You will find notification settings in the animations tab.</li>
+            <li>Press on React to Notifications to start the service.</li>
+            <li>Select which animation you want to run when there is a notification</li>
+            <li>Press on "Select which apps trigger notifications" and tick on all the apps you want the app to use leds when a notification come in.</li>
+            <li>Optionaly you can select notification timeout</li>
+            <li>You can select different animations or colours for each app</li>
+        </ol>
+
+        <h3>Second led</h3>
+        <p>With the release of version 5 you can also enable the use of the second led that's normally ment to be used with a custom case.</p>
+        <p>The "enable second led" switch above "Notification settings" switch enables the second led for any animations selected above. This doesnt have any impact on using the second led for notifications.</p>
+        <p>For notifications you now have the following options relating to the second led.</p>
+        <ol>
+            <li>"use second led for notifications also" This lights up the second led and the logo led when a notification comes in.</li>
+            <li>"Use Only the second led for notifications" This lights up only the second led.</li>
+            <li>If you have both 1 and 2 disabled then only the logo led with light up.</li>
+        </ol>
+
+        <h2>Notification Timeout</h2>
+        <p>This feature was added in release 7. It allows you to choose a time between 20 seconds and 9 hours, this will determine the maximum time it takes before the leds are turned off provided the notification is not cleared.</p>
+        <p>The slider ( or seekbar in android lingo ) is setup so that it increases exponentially meaning it is easier to dile in smalled values, For example half way through the bar is only 4 minutes. 3/4 of the way is around 1 hour and it will increase quickly to 9 hours and 33 minutes at the end.</p>
+
+        <h3>Per App Custom Animations and Colours</h3>
+        <p>This feature was introduced after release 11. It allows each app to have it own unique animation and colours for the leds. So you can set all if your Telegram notifications to blink blue for example, all of say youtube notifications to breath red and so on.</p>
+        <p>To use this mode</p>
+        <ol>
+            <li>In the notification settings click on "Select which apps trigger notifications"</li>
+            <li>Click on the app which you want to enable, it should turn green with a green asus rog logo.</li>
+            <li>To select which animation you want to use for the app click on the apps icon and a new view will come up saying "custom notification options for (app name)"</li>
+            <li>From here you can enable your desired animation for this app.</li>
+            <li>Also make sure the standard notification options are enabled</li>
+        </ol>
+
+        <h2>Notification Snooze</h2>
+        <p>
+            This feature allows you to set a time window for when the notification service can be stopped. So if you dont want your leds to be blinking during the night then this feature is for you.</p>
+        <p>This feature is also recommended for rog 3 users as in order for rog 3 leds to work the app needs to hold a wakelock which consumes battery. So with notification snooze the wakelock is released thereby saving rog 3 users some battery.</p>
+        <p>How to Use Notification Snooze</p>
+        <ol>
+            <li>Click on "Show notification snooze settings" to expand the menu.</li>
+            <li>Select "Set start time" this is when you want the notification service to stop. set a future time. so for example if right now its 20:45 set 20:46 since if you set 20:44 it will trigger tommorow.</li>
+            <li>Select "set end time" set this after your start time.</li>
+            <li>select "enable snooze" to start.</li>
+        </ol>
+
+        <h2>Save Restore App Data</h2>
+        <p>Since release 13 you can now save and restore your data, this way you dont have to setup all of the settings for custom notifications each time you reinstall the app.</p>
+        <p>How to</p>
+        <ol>
+            <li>Change any setting in the app that you want and when finished go to the about tab.</li>
+            <li>Click on the "Export Settings" button to save.</li>
+            <li>After reinstalling the app or whenever. You can click on "Import Settings", the app will restart and your previous settings will be applied.</li>
+        </ol>
+
+        <h2>Battery Animations</h2>
+        <p>This feature is available since release 15. When enabled a service will receive broadcasts about the battery status and will apply a colour based on the battery percentage. 0% = red, 100% = green, anything in between will be a smooth gradient achieved by adjusting the hue.</p>
+        <p>This feature takes notifications into account, so if there is a notification present then the battery service wont update the leds, as notification visualisation is more important then battery.</p>
+        <p>The service updates the leds about every 5 seconds, This is because the build in android system only broadcasts battery changes every 5 second on average.</p>
+        <p>However connecting and disconnecting from the charger is broadcast almost immediately so there is no issues there.</p>
+
+        <h2>Music Visualiser</h2>
+        <p>Introduced in release 16. When enabled the leds dance to the music currently playing on the phone.</p>
+        <p>Notifications take priority over the visualiser. Once notifications are cleared visualiser will continue.</p>
+        <p>Modes</p>
+        <ol>
+            <li>rgb, the hue is changed according to the waveform</li>
+            <li>glow, the lightness of the colour is changed according to the waveform, It will use the colour you selected in the colorwheel tab.</li>
+        </ol>
+
+        <h2>Triple Shake</h2>
+        <p>Triple Shake allows you to quickly shake your phone 3 times to toggle the second led when enabled.</p>
+        <p>The second led will use whatever mode you selected above at the very top of the App.</p>
+        <p>It will also use the colour you selected in the colour wheel for the appropriate modes.</p>
+        <p>I made this because I use the second led as a flashlight sometimes so this is a quick shortcut lol</p>
+
+
+
+    </div>
+
+
+</div>
+<script>
+    console.log("asus rog phone rgb script");
+    var typed = new Typed('.headerh1', {
+        strings: ['$ Project','$ Project: Asus Rog Phone RGB'],
+        typeSpeed: 100,
+        showCursor: false,
+        smartBackspace: true,
+        backSpeed: 50
+    });
+
+    $(".selcet_container_asusrogphonergbscreenshots").click(function (){
+        click_container_asusrogphonergbscreenshots();
+        return false;
+    });
+
+    $(".selcet_container_asusrogphonergbreleases").click(function (){
+        click_container_asusrogphonergbreleases();
+        return false;
+    });
+
+    $(".selcet_container_asusrogphonergb").click(function (){
+        click_container_asusrogphonergb();
+        return false;
+    });
+
+
+</script>
+<style>
+    #rogrgbheader{
+        color: #ef741b;
+    }
+</style>

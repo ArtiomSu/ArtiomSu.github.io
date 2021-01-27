@@ -26,11 +26,18 @@ $(document).ready(function(){
         urlInsertParam("catonly",1);
     });
     $("#container_asusrogphonergb").click(function (){
-        sub_categorie_click("AsusRogPhoneRGB.html","containers", "#container_asusrogphonergb");
-        urlInsertParam("item","container_asusrogphonergb");
-        urlInsertParam("iteminner",null);
-        urlInsertParam("catonly",0);
+        click_container_asusrogphonergb();
     });
+    $("#container_asusrogphonergbreleases").click(function (){
+        click_container_asusrogphonergbreleases();
+    });
+    $("#container_asusrogphonergbscreenshots").click(function (){
+        click_container_asusrogphonergbscreenshots();
+    });
+    $("#container_asusrogphonergbfeatures").click(function (){
+        click_container_asusrogphonergbfeatures();
+    });
+
     $("#container_dynamicrypt").click(function (){
         sub_categorie_click("DynamiCrypt.html","containers", "#container_dynamicrypt");
         urlInsertParam("item","container_dynamicrypt");
@@ -78,6 +85,16 @@ $(document).ready(function(){
                 case "container_arduinocustommousecode":
                     click_container_arduinocustommousecode();
                     break;
+                case "container_asusrogphonergbreleases":
+                    click_container_asusrogphonergbreleases();
+                    break;
+                case "container_asusrogphonergbscreenshots":
+                    click_container_asusrogphonergbscreenshots();
+                    break;
+                case "container_asusrogphonergbfeatures":
+                    click_container_asusrogphonergbfeatures();
+                    break;
+
                 default:
 
             }
@@ -93,6 +110,29 @@ $(document).ready(function(){
     }
 
 });
+
+function click_container_asusrogphonergb(){
+    sub_categorie_click("AsusRogPhoneRGB.html","containers", "#container_asusrogphonergb");
+    urlInsertParam("item","container_asusrogphonergb");
+    urlInsertParam("iteminner",null);
+    urlInsertParam("catonly",0);
+}
+function click_container_asusrogphonergbreleases(){
+    sub_inner_categorie_click("AsusRogPhoneRGBReleases.html","containers", "#container_asusrogphonergbreleases");
+    urlInsertParam("iteminner","container_asusrogphonergbreleases");
+    urlInsertParam("catonly",0);
+}
+function click_container_asusrogphonergbscreenshots(){
+    sub_inner_categorie_click("AsusRogPhoneRGBscreenshots.html","containers", "#container_asusrogphonergbscreenshots");
+    urlInsertParam("iteminner","container_asusrogphonergbscreenshots");
+    urlInsertParam("catonly",0);
+}
+function click_container_asusrogphonergbfeatures(){
+    sub_inner_categorie_click("AsusRogPhoneRGBfeatures.html","containers", "#container_asusrogphonergbfeatures");
+    urlInsertParam("iteminner","container_asusrogphonergbfeatures");
+    urlInsertParam("catonly",0);
+}
+
 
 function click_container_arduinocustommousecode(){
     sub_inner_categorie_click("ArduinoCustomMouseCode.html","containers", "#container_arduinocustommousecode");

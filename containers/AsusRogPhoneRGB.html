@@ -1,6 +1,113 @@
 <div>
-    <h1 id="rogrgbheader">Asus Rog Phone RGB</h1>
-    <a href="https://github.com/ArtiomSu/Asus-ROG-Phone-2-RGB">code</a>
+
+    <div id="links">
+        <div class="links_text">Source Code</div>
+        <img class="logo" src="/images/github.png" alt="github link" onclick="window.open('https://github.com/ArtiomSu/Asus-ROG-Phone-2-RGB', '_blank');">
+        <div class="links_text">Videos</div>
+        <img class="logo" src="/images/YoutubeLogo.png" alt="Youtube link" onclick="window.open('https://www.youtube.com/watch?v=8rNJtEDuV1I', '_blank');">
+        <div class="links_text">Play Store</div>
+        <img class="logo" src="/images/playstorelogo.png" alt="Play store link" onclick="window.open('https://play.google.com/store/apps/details?id=terminal_heat_sink.asusrogphone2rgb', '_blank');">
+        <div class="links_text">Xda thread</div>
+        <img class="logo" src="/images/xdalogo.png" alt="Play store link" onclick="window.open('https://forum.xda-developers.com/t/app-root-asus-rog-phone-2-rgb.4124299/', '_blank');">
+        <div class="links_text">Apk Download</div>
+        <img class="logo" src="/images/download_icon.png" alt="Play store link" onclick="window.open('https://github.com/ArtiomSu/Asus-ROG-Phone-2-RGB/releases', '_blank');">
+
+    </div>
+
+    <div id="links_internal">
+        <button class="iteminnerbuttonrogrgb selcet_container_asusrogphonergbfeatures">Features</button>
+        <button class="iteminnerbuttonrogrgb selcet_container_asusrogphonergbreleases">Releases</button>
+        <button class="iteminnerbuttonrogrgb selcet_container_asusrogphonergbscreenshots">Screen shots</button>
+    </div>
+
+    <div class="text_standard">
+        <p>This is an Android App designed specifically to interact with the logo and second LEDs on the Asus ROG Phone 2 and Asus ROG Phone 3.</p>
+
+        <p>To view all of the features click on the Features tab above which will give you an idea of everything this app can do.</p>
+
+        <p>Originally this app was build for custom roms as the default Asus lighting app is unavailable. However this app does work fine on android 10 stock rom and many users prefer it over the built in one for it's many features.</p>
+
+        <p>This app requires a rooted device as it writes to the led driver which can only be done with root access.</p>
+
+        <p>To see the app in action you can take a look at the video linked at the top or checkout the screenshots tab.</p>
+
+        <p>The app is available to download from the Google Play Store and Github. You can click on the Releases tab to download a specific version from Github.</p>
+
+        <h2>How to Use</h2>
+        <p>Download the app either from Github or Play Store</p>
+        <p>After opening the app you will be granted with magisk's root pop up. Allow the request.</p>
+        <p>Now a screen will pop up allowing you to choose between rog 2 and rog 3 ( this is because rog 3 works slightly differently for notifications )</p>
+        <p>You will end up in the main tab where you can choose an animation you want to test. There are 2 buttons at the bottom right of the screen one is shaped like a bulb and the other is shaped like the ROG logo. Pressing the bulb will toggle the second LED on and off and pressing the ROG logo will toggle the led logo on and off</p>
+        <p>Note that you dont need to keep these on for the additional features for example if you enable react to notifications. When a set notification from comes in the app will turn on the LEDs regardless</p>
+        <p>You can also play around with the colour wheel provided you selected an appropriate animation (See table bellow)</p>
+
+        <h2>Animations</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Animation</th>
+                <th>Colour wheel will have an effect?</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>solid one colour</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>breathing one colour</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>blink</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>rainbow</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>another rainbow</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>rainbow breathe</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>somekind of thunder</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>thunder rainbow</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>quick two flashes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>quick two flashes rainbow</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>breathe rainbow</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>some strange breathe rainbow</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>slow glitchy rainbow</td>
+                <td>No</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+    </div>
+
 
 
 </div>
@@ -13,9 +120,24 @@
         smartBackspace: true,
         backSpeed: 50
     });
+
+    $(".selcet_container_asusrogphonergbscreenshots").click(function (){
+        click_container_asusrogphonergbscreenshots();
+        return false;
+    });
+
+    $(".selcet_container_asusrogphonergbreleases").click(function (){
+        click_container_asusrogphonergbreleases();
+        return false;
+    });
+
+    $(".selcet_container_asusrogphonergbfeatures").click(function (){
+        click_container_asusrogphonergbfeatures();
+        return false;
+    });
+
+
+
 </script>
 <style>
-    #rogrgbheader{
-        color: #ef741b;
-    }
 </style>
