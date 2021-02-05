@@ -6,7 +6,7 @@ var current_inner_sub_categorie_clicked = null;
 
 
 $(document).ready(function(){
-    var projects_div_names = ["container_asusrogphonergb","container_dynamicrypt","container_qmk","container_arduinocustommouse"];
+    var projects_div_names = ["container_asusrogphonergb","container_dynamicrypt","container_qmk","container_moviepicker","container_arduinocustommouse"];
     var youtube_div_names = ["container_Youtube1", "container_Youtube2", "container_Youtube3", "container_Youtube4", "container_Youtube5", "container_Youtube6", "container_Youtube7", "container_Youtube8", "container_Youtube9", "container_Youtube10", "container_Youtube11", "container_Youtube12", "container_Youtube13", "container_Youtube14"];
 
 
@@ -47,6 +47,12 @@ $(document).ready(function(){
     $("#container_qmk").click(function (){
         sub_categorie_click("QMK.html","containers", "#container_qmk");
         urlInsertParam("item","container_qmk");
+        urlInsertParam("iteminner",null);
+        urlInsertParam("catonly",0);
+    });
+    $("#container_moviepicker").click(function (){
+        sub_categorie_click("MoviePicker.html","containers", "#container_moviepicker");
+        urlInsertParam("item","container_moviepicker");
         urlInsertParam("iteminner",null);
         urlInsertParam("catonly",0);
     });
