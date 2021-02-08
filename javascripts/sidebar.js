@@ -108,6 +108,15 @@ $(document).ready(function(){
                 case "container_asusrogphonergbfeatures":
                     click_container_asusrogphonergbfeatures();
                     break;
+                case "container_qmkcompile":
+                    click_container_qmkcompile();
+                    break;
+                case "container_qmklayers":
+                    click_container_qmklayers();
+                    break;
+                case "container_qmkleader":
+                    click_container_qmkleader();
+                    break;
 
                 default:
 
