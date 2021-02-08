@@ -6,7 +6,7 @@ var current_inner_sub_categorie_clicked = null;
 
 
 $(document).ready(function(){
-    var projects_div_names = ["container_asusrogphonergb","container_dynamicrypt","container_qmk","container_moviepicker","container_arduinocustommouse"];
+    var projects_div_names = ["container_asusrogphonergb","container_dynamicrypt","container_qmk","container_arduinocustommouse","container_moviepicker"];
     var youtube_div_names = ["container_Youtube1", "container_Youtube2", "container_Youtube3", "container_Youtube4", "container_Youtube5", "container_Youtube6", "container_Youtube7", "container_Youtube8", "container_Youtube9", "container_Youtube10", "container_Youtube11", "container_Youtube12", "container_Youtube13", "container_Youtube14"];
 
 
@@ -38,15 +38,23 @@ $(document).ready(function(){
         click_container_asusrogphonergbfeatures();
     });
 
+    $("#container_qmk").click(function (){
+        click_container_qmk();
+    });
+    $("#container_qmkcompile").click(function (){
+        click_container_qmkcompile();
+    });
+    $("#container_qmklayers").click(function (){
+        click_container_qmklayers();
+    });
+    $("#container_qmkleader").click(function (){
+        click_container_qmkleader();
+    });
+
+
     $("#container_dynamicrypt").click(function (){
         sub_categorie_click("DynamiCrypt.html","containers", "#container_dynamicrypt");
         urlInsertParam("item","container_dynamicrypt");
-        urlInsertParam("iteminner",null);
-        urlInsertParam("catonly",0);
-    });
-    $("#container_qmk").click(function (){
-        sub_categorie_click("QMK.html","containers", "#container_qmk");
-        urlInsertParam("item","container_qmk");
         urlInsertParam("iteminner",null);
         urlInsertParam("catonly",0);
     });
@@ -136,6 +144,29 @@ function click_container_asusrogphonergbscreenshots(){
 function click_container_asusrogphonergbfeatures(){
     sub_inner_categorie_click("AsusRogPhoneRGBfeatures.html","containers", "#container_asusrogphonergbfeatures");
     urlInsertParam("iteminner","container_asusrogphonergbfeatures");
+    urlInsertParam("catonly",0);
+}
+
+
+function click_container_qmk(){
+    sub_categorie_click("QMK.html","containers", "#container_qmk");
+    urlInsertParam("item","container_qmk");
+    urlInsertParam("iteminner",null);
+    urlInsertParam("catonly",0);
+}
+function click_container_qmkcompile(){
+    sub_inner_categorie_click("QMKCompile.html","containers", "#container_qmkcompile");
+    urlInsertParam("iteminner","container_qmkcompile");
+    urlInsertParam("catonly",0);
+}
+function click_container_qmklayers(){
+    sub_inner_categorie_click("QMKLayers.html","containers", "#container_qmklayers");
+    urlInsertParam("iteminner","container_qmklayers");
+    urlInsertParam("catonly",0);
+}
+function click_container_qmkleader(){
+    sub_inner_categorie_click("QMKLeader.html","containers", "#container_qmkleader");
+    urlInsertParam("iteminner","container_qmkleader");
     urlInsertParam("catonly",0);
 }
 

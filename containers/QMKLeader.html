@@ -1,0 +1,103 @@
+<div>
+    <div id="links">
+        <div class="links_text">Source Code</div>
+        <img class="logo" src="/images/github.png" alt="github link" onclick="window.open('https://github.com/ArtiomSu/qmk_firmware/tree/artiom', '_blank');">
+    </div>
+
+    <div id="links_internal">
+        <button class="iteminnerbuttonrogrgb selcet_container_qmk">Features</button>
+        <button class="iteminnerbuttonrogrgb selcet_container_qmklayers">Layers</button>
+        <button class="iteminnerbuttonrogrgb selcet_container_qmkcompile">Compile</button>
+    </div>
+
+    <div class="text_standard">
+        <h2>Leader Key Sequences</h2>
+
+        <table class="table_reset_width">
+            <thead>
+            <tr>
+                <th>Sequence</th>
+                <th>Output</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>t</td>
+                <td>spawn terminal and type <span class="green">timer</span></td>
+            </tr>
+            <tr>
+                <td>b i</td>
+                <td>type <span class="green">https://www.bing.com/images/search?q=</span></td>
+            </tr>
+            <tr>
+                <td>t o</td>
+                <td>type <span class="green">10.0.0.69:19009</span> press enter and type username</td>
+            </tr>
+
+            <tr>
+                <td>h</td>
+                <td>type <span class="green">hahahahahahahahahahaha</span></td>
+            </tr>
+
+            <tr>
+                <td>c</td>
+                <td>type <span class="green">code .</span> and press enter </td>
+            </tr>
+            <tr>
+                <td>right arrow</td>
+                <td>wake leds </td>
+            </tr>
+            <tr>
+                <td>right arrow x 2</td>
+                <td>toggle leds on and off</td>
+            </tr>
+            <tr>
+                <td>right arrow x 3</td>
+                <td>reset all config including hue, brightness, leds etc.... ( will be like when you just plugged in the keyboard )</td>
+            </tr>
+            <tr>
+                <td>e</td>
+                <td>type <span class="green">@t80search_bot</span> ( my telegram bot )</td>
+            </tr>
+            <tr>
+                <td>Up arrow</td>
+                <td>Go to gaming layer</td>
+            </tr>
+
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+    </div>
+
+
+
+</div>
+<script>
+    var typed = new Typed('.headerh1', {
+        strings: ['$ Project','$ Project: QMK'],
+        typeSpeed: 100,
+        backSpeed: 50,
+        showCursor: false,
+        smartBackspace: true
+    });
+
+    $(".selcet_container_qmk").click(function (){
+        click_container_qmk();
+        return false;
+    });
+
+    $(".selcet_container_qmklayers").click(function (){
+        click_container_qmklayers();
+        return false;
+    });
+
+    $(".selcet_container_qmkcompile").click(function (){
+        click_container_qmkcompile();
+        return false;
+    });
+
+</script>
+<style>
+
+</style>

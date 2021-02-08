@@ -181,6 +181,10 @@ h1{
     color: #379a0b;
 }
 
+.green{
+    color: #379a0b;
+}
+
 .matrix_colour_btns:hover{
     background-color: rgba(239,116,27,0.7);
     color: darkred;
