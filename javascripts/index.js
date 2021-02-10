@@ -1,4 +1,21 @@
-var containers_div_offset = 150;
+var containers_div_offset = 150; //offset for the container doesnt change
+
+var home_previews_last_time_changed = Date.now(); //helps keep the home page previews in check
+
+var allow_side_bar_categories_to_be_collapsed = false;
+
+var type_out_header = true; //when false the header wont be changed
+function type_header(string_array){
+    if(type_out_header){
+        var typed = new Typed('.headerh1', {
+            strings: string_array,
+            typeSpeed: 100,
+            backSpeed: 50,
+            showCursor: false,
+            smartBackspace: true
+        });
+    }
+}
 
 $(document).ready(function(){
     var matrix_canvas = document.getElementById('matrix_canvas');
@@ -141,7 +158,7 @@ $(document).ready(function(){
 
 
 
-    get_container("Home.html","containers");
+    //get_container("Home.html","containers");
     $("#categorieselector").css("height",$(window).height()-containers_div_offset);
 
     $(window).resize(function() {

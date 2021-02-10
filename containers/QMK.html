@@ -70,13 +70,7 @@
 
 </div>
 <script>
-    var typed = new Typed('.headerh1', {
-        strings: ['$ Project','$ Project: QMK'],
-        typeSpeed: 100,
-        backSpeed: 50,
-        showCursor: false,
-        smartBackspace: true
-    });
+    type_header(['$ Project','$ Project: QMK']);
 
     $(".selcet_container_qmklayers").click(function (){
         click_container_qmklayers();
@@ -95,6 +89,13 @@
 
     var image_index = 0;
     var images_top = ["/images/kb1.jpg","/images/kb2.jpg"]
+    var images_preloaded = [];
+
+    for (var i = 0; i < images_top.length; i++) {
+        images_preloaded[i] = new Image();
+        images_preloaded[i].src = images_top[i];
+    }
+
     function change_image(){
         $("#slideshow").animate({opacity:"100%"},1000);
 

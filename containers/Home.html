@@ -7,10 +7,16 @@
         <p>The Website is still being worked on so there is not a lot of content. The sidebar is fully functional and some of the projects can be seen there ( there is plenty more to add ) </p>
     </div>
 
+    <div class="text_standard">
+        <h2>Previews of Pages</h2>
+        <p>Use the sidebar for more details</p>
+    </div>
+    <div id="home_previews_div"></div>
+
 
 </div>
 <script>
-    console.log("asus rog phone rgb script");
+    type_out_header=false;
     var typed = new Typed('.headerh1', {
         strings: ['$ Artiom','$ ArtiomSu'],
         typeSpeed: 100,
@@ -18,6 +24,28 @@
         smartBackspace: true,
         backSpeed: 50
     });
+
+
+
+
+    var htmls_index = 0;
+    var htmls = ["QMK.html","MoviePicker.html","AsusRogPhoneRGB.html","ArduinoCustomMouse.html"];
+    animate_get_container(htmls[0],"home_previews_div");
+
+
+    function change_html(){
+        var date_now = Date.now();
+        if (date_now - home_previews_last_time_changed >= 10000){
+            home_previews_last_time_changed = date_now;
+            htmls_index++;
+            if(htmls_index >= htmls.length){
+                htmls_index = 0;
+            }
+            animate_get_container(htmls[htmls_index],"home_previews_div");
+        }
+
+    }
+    setInterval(change_html, 2000);
 
 </script>
 <style>

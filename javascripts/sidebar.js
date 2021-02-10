@@ -3,12 +3,12 @@ var current_expanded_categorie = null;
 var current_expanded_categorie_list = null;
 var current_sub_categorie_clicked = null;
 var current_inner_sub_categorie_clicked = null;
+var projects_div_names = ["container_asusrogphonergb","container_dynamicrypt","container_qmk","container_arduinocustommouse","container_moviepicker"];
+var youtube_div_names = ["container_Youtube1", "container_Youtube2", "container_Youtube3", "container_Youtube4", "container_Youtube5", "container_Youtube6", "container_Youtube7", "container_Youtube8", "container_Youtube9", "container_Youtube10", "container_Youtube11", "container_Youtube12", "container_Youtube13", "container_Youtube14"];
+
 
 
 $(document).ready(function(){
-    var projects_div_names = ["container_asusrogphonergb","container_dynamicrypt","container_qmk","container_arduinocustommouse","container_moviepicker"];
-    var youtube_div_names = ["container_Youtube1", "container_Youtube2", "container_Youtube3", "container_Youtube4", "container_Youtube5", "container_Youtube6", "container_Youtube7", "container_Youtube8", "container_Youtube9", "container_Youtube10", "container_Youtube11", "container_Youtube12", "container_Youtube13", "container_Youtube14"];
-
 
     $("#container_home").click(function (){
         expand_collapse_categories("#container_home",null);
@@ -20,10 +20,8 @@ $(document).ready(function(){
 
     //projects
     $("#container_Projects").click(function (){
-        expand_collapse_categories("#container_Projects",projects_div_names);
-        urlInsertParam("cat","container_Projects");
-        urlInsertParam("iteminner",null);
-        urlInsertParam("catonly",1);
+        allow_side_bar_categories_to_be_collapsed=true;
+        click_container_Projects();
     });
     $("#container_asusrogphonergb").click(function (){
         click_container_asusrogphonergb();
@@ -94,6 +92,12 @@ $(document).ready(function(){
     if(urlParams.has("cat")){
         use_cookie = false;
         $("#"+urlParams.get("cat")).click();
+    }else{
+        expand_collapse_categories("#container_home",null);
+        animate_get_container("Home.html","containers");
+        urlInsertParam("cat","container_home");
+        urlInsertParam("iteminner",null);
+        urlInsertParam("catonly",1);
     }
     if(urlParams.has("item") && urlParams.has("catonly")){
         if(urlParams.get("catonly") === "0"){
@@ -141,6 +145,12 @@ $(document).ready(function(){
     }
 
 });
+function click_container_Projects(){
+    expand_collapse_categories("#container_Projects",projects_div_names);
+    urlInsertParam("cat","container_Projects");
+    urlInsertParam("iteminner",null);
+    urlInsertParam("catonly",1);
+}
 
 function click_container_asusrogphonergb(){
     sub_categorie_click("AsusRogPhoneRGB.html","containers", "#container_asusrogphonergb");
@@ -149,19 +159,43 @@ function click_container_asusrogphonergb(){
     urlInsertParam("catonly",0);
 }
 function click_container_asusrogphonergbreleases(){
-    sub_inner_categorie_click("AsusRogPhoneRGBReleases.html","containers", "#container_asusrogphonergbreleases");
-    urlInsertParam("iteminner","container_asusrogphonergbreleases");
-    urlInsertParam("catonly",0);
+    allow_side_bar_categories_to_be_collapsed=false;
+    click_container_Projects();
+    setTimeout(function() {
+        click_container_asusrogphonergb();
+        setTimeout(function() {
+            sub_inner_categorie_click("AsusRogPhoneRGBReleases.html","containers", "#container_asusrogphonergbreleases");
+            urlInsertParam("iteminner","container_asusrogphonergbreleases");
+            urlInsertParam("catonly",0);
+            }, 50);
+    }, 50);
+
+
 }
 function click_container_asusrogphonergbscreenshots(){
-    sub_inner_categorie_click("AsusRogPhoneRGBscreenshots.html","containers", "#container_asusrogphonergbscreenshots");
-    urlInsertParam("iteminner","container_asusrogphonergbscreenshots");
-    urlInsertParam("catonly",0);
+    allow_side_bar_categories_to_be_collapsed=false;
+    click_container_Projects();
+    setTimeout(function() {
+        click_container_asusrogphonergb();
+        setTimeout(function() {
+            sub_inner_categorie_click("AsusRogPhoneRGBscreenshots.html","containers", "#container_asusrogphonergbscreenshots");
+            urlInsertParam("iteminner","container_asusrogphonergbscreenshots");
+            urlInsertParam("catonly",0);
+        }, 50);
+    }, 50);
+
 }
 function click_container_asusrogphonergbfeatures(){
-    sub_inner_categorie_click("AsusRogPhoneRGBfeatures.html","containers", "#container_asusrogphonergbfeatures");
-    urlInsertParam("iteminner","container_asusrogphonergbfeatures");
-    urlInsertParam("catonly",0);
+    allow_side_bar_categories_to_be_collapsed=false;
+    click_container_Projects();
+    setTimeout(function() {
+        click_container_asusrogphonergb();
+        setTimeout(function() {
+            sub_inner_categorie_click("AsusRogPhoneRGBfeatures.html","containers", "#container_asusrogphonergbfeatures");
+            urlInsertParam("iteminner","container_asusrogphonergbfeatures");
+            urlInsertParam("catonly",0);
+        }, 50);
+    }, 50);
 }
 
 
@@ -172,27 +206,44 @@ function click_container_qmk(){
     urlInsertParam("catonly",0);
 }
 function click_container_qmkcompile(){
-    sub_inner_categorie_click("QMKCompile.html","containers", "#container_qmkcompile");
-    urlInsertParam("iteminner","container_qmkcompile");
-    urlInsertParam("catonly",0);
+    allow_side_bar_categories_to_be_collapsed=false;
+    click_container_Projects();
+    setTimeout(function() {
+        click_container_qmk();
+        setTimeout(function() {
+            sub_inner_categorie_click("QMKCompile.html","containers", "#container_qmkcompile");
+            urlInsertParam("iteminner","container_qmkcompile");
+            urlInsertParam("catonly",0);
+        }, 50);
+    }, 50);
 }
 function click_container_qmklayers(){
-    sub_inner_categorie_click("QMKLayers.html","containers", "#container_qmklayers");
-    urlInsertParam("iteminner","container_qmklayers");
-    urlInsertParam("catonly",0);
+    allow_side_bar_categories_to_be_collapsed=false;
+    click_container_Projects();
+    setTimeout(function() {
+        click_container_qmk();
+        setTimeout(function() {
+            sub_inner_categorie_click("QMKLayers.html","containers", "#container_qmklayers");
+            urlInsertParam("iteminner","container_qmklayers");
+            urlInsertParam("catonly",0);
+        }, 50);
+    }, 50);
 }
 function click_container_qmkleader(){
-    sub_inner_categorie_click("QMKLeader.html","containers", "#container_qmkleader");
-    urlInsertParam("iteminner","container_qmkleader");
-    urlInsertParam("catonly",0);
+    allow_side_bar_categories_to_be_collapsed=false;
+    click_container_Projects();
+    setTimeout(function() {
+        click_container_qmk();
+        setTimeout(function() {
+            sub_inner_categorie_click("QMKLeader.html","containers", "#container_qmkleader");
+            urlInsertParam("iteminner","container_qmkleader");
+            urlInsertParam("catonly",0);
+        }, 50);
+    }, 50);
 }
 
 
-function click_container_arduinocustommousecode(){
-    sub_inner_categorie_click("ArduinoCustomMouseCode.html","containers", "#container_arduinocustommousecode");
-    urlInsertParam("iteminner","container_arduinocustommousecode");
-    urlInsertParam("catonly",0);
-}
+
 
 function click_container_arduinocustommouse(){
     sub_categorie_click("ArduinoCustomMouse.html","containers", "#container_arduinocustommouse");
@@ -200,8 +251,21 @@ function click_container_arduinocustommouse(){
     urlInsertParam("iteminner",null);
     urlInsertParam("catonly",0);
 }
+function click_container_arduinocustommousecode(){
+    allow_side_bar_categories_to_be_collapsed=false;
+    click_container_Projects();
+    setTimeout(function() {
+        click_container_arduinocustommouse();
+        setTimeout(function() {
+            sub_inner_categorie_click("ArduinoCustomMouseCode.html","containers", "#container_arduinocustommousecode");
+            urlInsertParam("iteminner","container_arduinocustommousecode");
+            urlInsertParam("catonly",0);
+        }, 10);
+    }, 10);
+}
 
 function sub_inner_categorie_click(html_page, container_div, name){
+    type_out_header=true;
     var send_request = true;
     if(current_inner_sub_categorie_clicked === null){
         current_inner_sub_categorie_clicked = name;
@@ -218,15 +282,22 @@ function sub_inner_categorie_click(html_page, container_div, name){
 
 
 function sub_categorie_click(html_page, container_div, name){
+    allow_side_bar_categories_to_be_collapsed=true;
+    type_out_header=true;
     var send_request = true;
+    console.log(current_sub_categorie_clicked+" "+name);
     if(current_sub_categorie_clicked === null){
+        console.log(1);
         $(name).css({backgroundColor: "rgba(201, 94, 17,0.3)"});
         current_sub_categorie_clicked = name;
     }else if(current_sub_categorie_clicked !== name){
+        console.log(2);
         $(current_sub_categorie_clicked).css({backgroundColor: "rgba(201, 94, 17,0)"});
         $(name).css({backgroundColor: "rgba(201, 94, 17,0.3)"});
         current_sub_categorie_clicked = name;
     }else if(current_sub_categorie_clicked === name){
+        console.log(3);
+        $(name).css({backgroundColor: "rgba(201, 94, 17,0.3)"});
         send_request = false;
     }
     if(current_inner_sub_categorie_clicked !== null){
@@ -256,7 +327,7 @@ function expand_collapse_categories(container_name,container_divs) {
             collapse_category(current_expanded_categorie_list, false);
             $(container_name).css({backgroundColor: "rgba(139,0,0,0.4)"});
             is_categorie_1_expanded = true;
-        } else if (current_expanded_categorie === container_name) {//collapse this cattegorie
+        } else if (current_expanded_categorie === container_name && allow_side_bar_categories_to_be_collapsed) {//collapse this cattegorie
             $(current_expanded_categorie).css({backgroundColor: "rgba(139,0,0,0)"});
             current_expanded_categorie = null;
             is_categorie_1_expanded = false;
