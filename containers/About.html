@@ -1,0 +1,108 @@
+
+<div class="text_standard">
+    <p>ArtiomSu website is built using my simple custom single page framework developed specifically to work with github pages.</p>
+    <p>This website uses jquery + plugins as it is fast to write with and easy to work with animations.</p>
+    <p>This website contains an entry for some of my open source projects.</p>
+    <h2>Socials</h2>
+</div>
+
+
+<div class="links">
+    <img class="logo" src="/images/github.png" alt="github link" onclick="window.open('https://github.com/ArtiomSu', '_blank');">
+    <img class="logo" src="/images/YoutubeLogo.png" alt="Youtube link" onclick="window.open('https://www.youtube.com/c/TerminalHeatSink', '_blank');">
+    <img class="logo" src="/images/playstorelogo.png" alt="Play store link" onclick="window.open('https://play.google.com/store/apps/details?id=terminal_heat_sink.asusrogphone2rgb', '_blank');">
+    <img class="logo" src="/images/xdalogo.png" alt="Play store link" onclick="window.open('https://forum.xda-developers.com/m/terminal_heat_sink.10420213/#recent-content', '_blank');">
+    <img class="logo" src="/images/telegram.png" alt="Play store link" onclick="window.open('https://t.me/Terminal_Heat_Sink', '_blank');">
+
+</div>
+
+<div class="text_standard">
+    <h2>Email me</h2>
+    <div id="about_form_div">
+        <form class="about_form"
+                action="https://formspree.io/f/meqpdwnv"
+                method="POST"
+        >
+            <label>
+                <input class="about_form_input" type="text" name="_replyto" placeholder="Your Email">
+            </label>
+            <label>
+                <textarea rows="10" class="about_form_text_area" name="message" placeholder="Your message"></textarea>
+            </label>
+
+            <!-- your other form fields go here -->
+
+            <button class="about_form_submit" type="submit">Send</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    console.log("asus rog phone rgb script");
+    var typed = new Typed('.headerh1', {
+        strings: ['$ Abou','$ About'],
+        typeSpeed: 100,
+        showCursor: false,
+        smartBackspace: true,
+        backSpeed: 50
+    });
+
+</script>
+<style>
+
+    .about_form_input{
+        text-align: center;
+        color: #d2c7ab;
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        margin: 0;
+        border: none;
+        background-color: rgba(239,116,27,0.3);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        transition: background-color 1s;
+
+    }
+    .about_form_input:focus{
+        background-color: rgba(0, 0, 0, 0.7);
+        outline: none;
+    }
+    .about_form_text_area{
+        text-align: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border: none;
+        color: #d2c7ab;
+        background-color: rgba(239,116,27,0.2);
+        resize: none;
+        padding-top:15px;
+        padding-bottom: 15px;
+        transition: background-color 1s;
+    }
+    .about_form_text_area:focus{
+        background-color: rgba(0, 0, 0, 0.7);
+        outline: none;
+    }
+    #about_form_div{
+        width: 100%;
+    }
+    .about_form_submit{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border: none;
+        color: #d2c7ab;
+        background-color: rgba(239,116,27,0.4);
+        padding-top:15px;
+        padding-bottom: 15px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transition: background-color 1s;
+    }
+    .about_form_submit:hover{
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+</style>
