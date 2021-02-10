@@ -119,7 +119,7 @@ $(document).ready(function(){
         var animation_transition = 500;
         //$("#matrix_colour_btns_div").animate({height:"30px"},animation_transition);
 
-        $("#matrix_canvas_theme").animate({"background-position-y":"125%"},animation_transition);
+        $("#matrix_canvas_theme").animate({"background-position-y":"125%","opacity":1},animation_transition);
 
         $("#matrix_canvas_orange").animate({"fontSize": "15px",height: "30px"},animation_transition);
         $("#matrix_canvas_red").animate({"fontSize": "15px",height: "30px"},animation_transition+100);
@@ -130,7 +130,7 @@ $(document).ready(function(){
     }, function (){
         var animation_transition = 500;
         //$("#matrix_colour_btns_div").animate({height:"2px"},animation_transition);
-        $("#matrix_canvas_theme").animate({"background-position-y":"100%"},animation_transition+400);
+        $("#matrix_canvas_theme").animate({"background-position-y":"100%","opacity":0},animation_transition+400);
         $("#matrix_canvas_orange").animate({"fontSize": "0px",height: "2px"},animation_transition+400);
         $("#matrix_canvas_red").animate({"fontSize": "0px",height: "2px"},animation_transition+300);
         $("#matrix_canvas_blue").animate({"fontSize": "0px",height: "2px"},animation_transition+200);

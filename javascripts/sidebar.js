@@ -80,6 +80,14 @@ $(document).ready(function(){
         urlInsertParam("iteminner",null);
     });
 
+    $("#container_about").click(function (){
+        expand_collapse_categories("#container_about",null);
+        animate_get_container("About.html","containers");
+        urlInsertParam("cat","container_about");
+        urlInsertParam("iteminner",null);
+        urlInsertParam("catonly",1);
+    });
+
     //deal with url params
     var use_cookie = true;
     var urlParams = new URLSearchParams(window.location.search);

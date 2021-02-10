@@ -3,6 +3,11 @@
     width: 100%;
     white-space: nowrap;
 }
+.links{
+    height: 50px;
+    width: 100%;
+    white-space: nowrap;
+}
 #links_internal{
     height: 50px;
     width: 100%;
@@ -68,6 +73,18 @@
     width: 50%;
     float: left;
 }
+
+.one_pics_div{
+    width: 100%;
+    display: inline-block;
+}
+.one_pics_pic{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    float: left;
+}
+
 .text_standard{
     color: #d5d5d5;
     width: 100%;
@@ -75,6 +92,15 @@
     margin-bottom: 20px;
     background-color: rgba(0,0,0,0.4);
 }
+.text_standard p{
+    color: #cbbda8;
+    font-size: 110%;
+    line-height: 1.5;
+}
+.text_standard h3{
+    color: #d25d5d;
+}
+
 .text_standard h2{
     color: #ef741b;
     text-align: center;

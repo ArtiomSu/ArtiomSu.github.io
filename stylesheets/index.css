@@ -72,7 +72,7 @@ html {
     margin: 0px;
     margin-top: -5px;
     text-align: left;
-    margin-left: 40%;
+    margin-left: 16.66%;
 }
 
 #header_containder{
@@ -167,6 +167,7 @@ h1{
     height: 30px;
     background-size: 400% 500%;
     background-position: 400% 100%;
+    opacity: 0;
     /*transition: background-position 1s;*/
 }
 /*#matrix_canvas_theme:hover{*/

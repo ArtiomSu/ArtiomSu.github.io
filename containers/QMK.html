@@ -11,21 +11,61 @@
     </div>
 
     <div class="text_standard">
+        <div class="one_pics_div" id="slideshow">
+            <a data-fancybox="gallery" href="/images/kb1.jpg"><img class="one_pics_pic" src="/images/kb1.jpg"></a>
+        </div>
+    </div>
+
+    <div class="text_standard">
+        <h2>What is QMK?</h2>
+        <p>QMK is opensource firmware commonly used on keyboards and is very popular in the build your own keyboard scene as it can be flashed to inexpensive microcontrollers such as teensy and micro pro.</p>
+        <p>Compared to traditional or even high end keyboards from brands like logitech and corsair QMK allows you to do way more customisation, in other words it is much more powerful with its unique features. </p>
+        <p>Also compared to other keyboards that have advanced features, those advanced features require you to have the oem software running and drivers installed. With qmk this is not required everything is contained within the hardware the pc simply sees a normal keyboard and uses default drivers. This way you can setup your layouts and use them on windows, mac, linux, android without any setup whatsoever.</p>
+        <p>You can customise the firmware to your liking and its easy to add your own features though c code like I have done ( you can see all the features in for my custom layout below ). If you want to get started with compiling you can head over <span class="a_nice_links selcet_container_qmkcompile">here</span> But if you are scared of code you can use a number of graphical web configurators to change your layout.</p>
+
+        <h2>Why should you use it?</h2>
+        <p>It is very handy if you are a software developer or if you use a linux os with a window manager. In my case I use Arch Linux with i3 window manager. Window managers are heavily keyboard shortcut based and with qmk instead of pressing 5 buttons for a shortcut you can do it with 2 or even one. For example to launch firefox I use CTRL + Shift + Alt + Win + f if you tried doing that on a normal keyboard you would probably break your fingers but with qmk I just press 2 keys, one key is assigned to CTRL + Shift + Alt + Win and then I just tap f while holding that.</p>
+        <p>Another amazing aspect of qmk is the idea of layers. This is a little bit hard to explain without a video but it is essentially like your shift key but instead of pressing say shift a to make a capital A, you can program the firmware to output *, type some text, toggle leds, move your mouse etc....</p>
+        <p>Take a look at my <span class="a_nice_links selcet_container_qmklayers">layers</span> in the layers tab for more info and explanation of what each layer does.</p>
+
+        <h2>Ergodox EZ</h2>
+        <p>My layout is built for the Ergodox Ez keyboard. You can see how it looks like at the top of the page.</p>
+        <p>It is a split keyboard so its perfect for ergonomics and allows you to stretch your hands out wide for a more comfortable experience.</p>
+        <p>If you are planning on buying one but have been using a traditional keyboard all your life it will take awhile to adjust to the the ortholinear layout but it is worth it trust me. It took me about 4 months to get used to it properly. In the first month I just used it occasionally as any real work would be too slow to do on it. Now I can actually type faster than I ever could on a regular keyboard, this is partly because you are forced to use one had per keyboard side therefore you wouldn't be pressing u,i etc with your left hand and so on, so it teaches you good typing habits whether you like it or not.</p>
+
         <h2>Features</h2>
-        <ul>
-            <li>Change leds brightness up and down</li>
-            <li>Change hue up and down</li>
-            <li>Toggle main layer leds</li>
-            <li>Toggle all layer leds</li>
-            <li>Timeout leds after 5 minutes or whatever you set in the config</li>
-            <li>Toggle bunnyhop when space is held</li>
-            <li>Key led notification when leader key is running or when bunnyhop is enabled the = key will blink red.</li>
-            <li>Uses four layers</li>
-            <li>Uses leader key, see leader key table</li>
-            <li>Uses per layer led layouts</li>
-            <li>A lot of different macros for vim mostly</li>
-            <li>Custom animation can be seen in my artiom_no_mouse_leds keymap ( I don't use it with my regular keymap since I don't really need it and it adds a lot of extra code )</li>
-        </ul>
+        <p>Here I will go through most of the features specific to my layout for the ergodox again you can see a visual representation of the layout <span class="a_nice_links selcet_container_qmklayers">here</span></p>
+
+        <h3>LEDs brightness</h3>
+        <p>Increase/Decrease the keyboards backlight leds through <span class="a_nice_links selcet_container_qmklayers">Layer</span> 3 annotated by led + and led - in the layout</p>
+
+        <h3>Hue</h3>
+        <p>Change the hue across all layers this pretty much rotates the colour wheel if you are familiar with image/video editors. Once again this is in <span class="a_nice_links selcet_container_qmklayers">Layer</span> 3 and annotated by hue - and hue +</p>
+
+        <h3>Toggle main layer leds</h3>
+        <p>Allows you to toggle the leds on and off for the first layer only. This is in <span class="a_nice_links selcet_container_qmklayers">Layer</span> 3 and annotated by Toggle layer 1 led</p>
+
+        <h3>Toggle all LEDs</h3>
+        <p>This is part of a leader key sequence go <span class="a_nice_links selcet_container_qmkleader">Here</span> for a detailed explanation on how leader key sequences work. Essentially it lets you toggle the leds on and off after completing the sequence</p>
+
+        <h3>Timeout</h3>
+        <p>The keyboard will switch of its LEDs after 5 minutes of not pressing space. (space in my setup is essentially a macro as it is also part of the bunnyhop feature). Pressing space will turn on LEDs. </p>
+
+        <h3>Bunnyhop</h3>
+        <p>Bunnyhop is a term used in some games where you can gain speed by jumping repeatedly. The keyboard supports bunnyhopping with random delays so games dont detect it. To Enable bunny hopping press the toggle Bunnyhop button in layer 3. You will know when bunnyhopping is enabled because I programmed the = key to blink red when bunnyhop is active.</p>
+
+        <h3>Leader Key Notification</h3>
+        <p>This lets you know the time period for when the leader key is active as the bottom 3 switches will light up blue. For more information on leader key you can click <span class="a_nice_links selcet_container_qmkleader">here</span>. </p>
+
+        <h3>Uses four layer</h3>
+        <p>See <span class="a_nice_links selcet_container_qmklayers">Layers</span> more info.</p>
+        <p>Each layer has its own unique LED layout also. This allows you to easily distinguish between layers provided the LEDs are enabled.</p>
+
+        <h3>Macros</h3>
+        <p>A lot of macros are used for vim, ssh and so on you can find them in <span class="a_nice_links selcet_container_qmklayers">layers</span> and <span class="a_nice_links selcet_container_qmkleader">Leader</span> sections.</p>
+
+        <h3>Custom LED Animation</h3>
+        <p>These are present in my artiom_no_mouse_leds keymap which is slighly different to my default keymap artiom_no_mouse. If you are wondering what the no_mouse is for, its because I disabled the mouse functionality within the firmware to save space and also because I dont use it.</p>
     </div>
 
 </div>
@@ -53,6 +93,20 @@
         return false;
     });
 
+    var image_index = 0;
+    var images_top = ["/images/kb1.jpg","/images/kb2.jpg"]
+    function change_image(){
+        $("#slideshow").animate({opacity:"100%"},1000);
+
+        $("#slideshow").delay(3000).animate({opacity:"30%"},1000,function (){
+            image_index++;
+            if(image_index >= images_top.length){
+                image_index = 0;
+            }
+            $("#slideshow").html("<a data-fancybox=\"gallery\" href=\""+images_top[image_index]+"\"><img class=\"one_pics_pic\" src=\""+images_top[image_index]+"\"></a>");
+        });
+    }
+    setInterval(change_image, 5000);
 </script>
 <style>
 
