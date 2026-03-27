@@ -1,0 +1,1 @@
+import{_ as o,c as a,a as s,o as t}from"./index-DV5PqyBK.js";const c={},r={class:"home"};function n(_,e){return t(),a("section",r,[...e[0]||(e[0]=[s("div",{class:"hero"},[s("h1",{class:"name"},"ArtiomSu")],-1)])])}const i=o(c,[["render",n],["__scopeId","data-v-43d2dbab"]]);export{i as default};
