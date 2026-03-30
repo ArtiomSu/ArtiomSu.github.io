@@ -18,6 +18,9 @@
   --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, sans-serif;
+  --color-good: #4ae683;
+  --color-good-text: #37df72;
+  --color-good-dim: rgba(74, 230, 131, 0.1);
 }
 
 html {

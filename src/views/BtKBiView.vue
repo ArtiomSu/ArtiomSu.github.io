@@ -4,6 +4,11 @@
       <span class="badge">coming soon</span>
       <h1 class="headline">bluetooth to keyboard input</h1>
       <p class="sub">fully open source input stick alternative</p>
+      <span class="badge badge-good" style="margin-top: 36px">
+        <router-link to="/bluetooth-to-kb-input-flasher" class="nav-link">
+          Flash BtKBi firmware to your esp32 S3 Zero 
+        </router-link>
+      </span>
     </div>
   </section>
 </template>
@@ -35,6 +40,14 @@
   border: 1px solid var(--color-accent-border);
   background: var(--color-accent-dim);
   color: var(--color-accent-text);
+}
+
+.badge-good {
+  border-color: var(--color-good-text);
+  background: var(--color-good-dim);
+  color: var(--color-good-text);
+  font-size: 1em;
+  text-transform: none;
 }
 
 .headline {

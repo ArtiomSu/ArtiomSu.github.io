@@ -10,6 +10,11 @@ const routes = [
     path: '/bluetooth-to-kb-input',
     name: 'btkbi',
     component: () => import('../views/BtKBiView.vue')
+  },
+  {
+    path: '/bluetooth-to-kb-input-flasher',
+    name: 'btkbi-flasher',
+    component: () => import('../views/BtKBiFlasherView.vue')
   }
 ]
 
