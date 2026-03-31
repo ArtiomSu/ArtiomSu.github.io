@@ -33,10 +33,12 @@
 
       <div class="buttons">
         <button class="btn btn-primary" @click="startInstall(false)">
-          🔄 Install / Update
+          <span class="material-icons" style="font-size:1.2em;vertical-align:middle;margin-right:6px;">autorenew</span>
+          Install / Update
         </button>
         <button class="btn btn-danger" @click="startInstall(true)">
-          🧹 Factory Reset + Install
+          <span class="material-icons" style="font-size:1.2em;vertical-align:middle;margin-right:6px;">cleaning_services</span>
+          Factory Reset + Install
         </button>
       </div>
 
