@@ -81,7 +81,10 @@
             <li>Flash directly from Chrome browser</li>
             <li>RGB LED status indicator (red idle / blue connected / green typing)</li>
             <li>Optional 3D-printed case — available in several colours</li>
-            <li>3D print files available free in the <a href="https://github.com/ArtiomSu/bluetooth-to-keyboard-input-esp32-s3-zero/tree/main/3d-printing" target="_blank" rel="noopener" class="link">repo's <code>3d-printing</code> folder</a></li>
+            <li>
+              3D print files available free in the <a href="https://github.com/ArtiomSu/bluetooth-to-keyboard-input-esp32-s3-zero/tree/main/3d-printing" target="_blank" rel="noopener" class="link">repo's <code>3d-printing</code> folder</a>
+              Or via <a href="https://makerworld.com/en/models/2604304-btkbi-esp32-s3-zero-case#profileId-2873828" target="_blank" rel="noopener" class="link">Maker World</a>
+            </li>
           </ul>
           <div class="hardware-ctas">
             <a href="https://s.click.aliexpress.com/e/_c3AQoZNX" target="_blank" rel="noopener sponsored" class="btn btn-primary">
