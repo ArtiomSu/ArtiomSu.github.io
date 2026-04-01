@@ -367,7 +367,7 @@ onMounted(() => {
 }
 
 .btn-secondary:hover {
-  border-color: #333;
+  border-color: var(--color-hover-border);
   background: var(--color-surface);
 }
 
@@ -503,7 +503,7 @@ onMounted(() => {
 }
 
 .feature-card:hover {
-  border-color: #2a2a2a;
+  border-color: var(--color-hover-border);
 }
 
 .feature-icon {
@@ -546,7 +546,7 @@ onMounted(() => {
 }
 
 .screenshots-scroll::-webkit-scrollbar-thumb {
-  background: #333;
+  background: var(--color-hover-border);
   border-radius: 2px;
 }
 
@@ -565,7 +565,7 @@ onMounted(() => {
 }
 
 .screenshot-card:hover img {
-  border-color: #333;
+  border-color: var(--color-hover-border);
 }
 
 .screenshot-card figcaption {
@@ -625,7 +625,7 @@ onMounted(() => {
   font-family: 'SF Mono', 'Fira Code', monospace;
   font-size: 0.8em;
   padding: 1px 5px;
-  background: rgba(255,255,255,0.06);
+  background: var(--color-code-bg);
   border: 1px solid var(--color-border);
   border-radius: 4px;
   color: var(--color-accent-text);
@@ -633,7 +633,7 @@ onMounted(() => {
 
 .affiliate-note {
   font-size: 0.7rem;
-  color: #333;
+  color: var(--color-text-faint);
 }
 
 .hardware-image-wrap {
@@ -666,7 +666,7 @@ onMounted(() => {
 }
 
 .video-card:hover {
-  border-color: #333;
+  border-color: var(--color-hover-border);
   transform: translateY(-2px);
 }
 
