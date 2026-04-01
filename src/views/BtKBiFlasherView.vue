@@ -53,7 +53,7 @@
 <script setup>
 import { ref } from "vue";
 
-const baseUrl = "https://corsproxy.io/?url=https://github.com/ArtiomSu/bluetooth-to-keyboard-input-esp32-s3-zero/releases/latest/download";
+const baseUrl = "https://raw.githubusercontent.com/ArtiomSu/bluetooth-to-keyboard-input-esp32-s3-zero/main/.raw-firmware";
 
 const normalInstaller = ref(null);
 const eraseInstaller = ref(null);
