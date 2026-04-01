@@ -53,7 +53,7 @@
 <script setup>
 import { ref } from "vue";
 
-const baseUrl = "/btkbi/firmware"; // todo: update this later to repo url
+const baseUrl = "https://github.com/ArtiomSu/bluetooth-to-keyboard-input-esp32-s3-zero/releases/latest/download";
 
 const normalInstaller = ref(null);
 const eraseInstaller = ref(null);
