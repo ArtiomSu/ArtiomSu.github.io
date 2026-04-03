@@ -64,6 +64,7 @@ const links = [
   { to: '/mana-ball-track-ball', label: 'Mana Ball' },
   { to: '/qmk-raw-hid-router', label: 'QMK HID Router' },
   { to: '/dactyl-manuform-5x7', label: 'Dactyl 5×7' },
+  { to: '/macropad-pico', label: 'MacroPad' },
   { to: '/yubikey-ssh-manager', label: 'YubiKey SSH' },
   { to: '/dynamicrypt', label: 'DynamiCrypt' },
 ]

@@ -40,6 +40,11 @@ const routes = [
     path: '/dynamicrypt',
     name: 'dynamicrypt',
     component: () => import('../views/DynamiCryptView.vue')
+  },
+  {
+    path: '/macropad-pico',
+    name: 'macropad-pico',
+    component: () => import('../views/MacropadView.vue')
   }
 ]
 
