@@ -15,6 +15,11 @@ const routes = [
     path: '/bluetooth-to-kb-input-flasher',
     name: 'btkbi-flasher',
     component: () => import('../views/BtKBiFlasherView.vue')
+  },
+  {
+    path: '/mana-ball-track-ball',
+    name: 'mana-ball-track-ball',
+    component: () => import('../views/ManaBallTrackballView.vue')
   }
 ]
 

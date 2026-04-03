@@ -35,6 +35,7 @@ import { ref, onMounted } from 'vue'
 const links = [
   { to: '/', label: 'Home', exact: true },
   { to: '/bluetooth-to-kb-input', label: 'BtKBi' },
+  { to: '/mana-ball-track-ball', label: 'Mana Ball' },
 ]
 
 const isDark = ref(false)
