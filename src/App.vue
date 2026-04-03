@@ -66,6 +66,7 @@ const links = [
   { to: '/dactyl-manuform-5x7', label: 'Dactyl 5×7' },
   { to: '/macropad-pico', label: 'MacroPad' },
   { to: '/ssupss', label: 'SSUPSS' },
+  { to: '/asus-rog-rgb', label: 'ROG RGB' },
   { to: '/yubikey-ssh-manager', label: 'YubiKey SSH' },
   { to: '/dynamicrypt', label: 'DynamiCrypt' },
 ]

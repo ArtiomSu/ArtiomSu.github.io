@@ -50,6 +50,11 @@ const routes = [
     path: '/ssupss',
     name: 'ssupss',
     component: () => import('../views/SsupssView.vue')
+  },
+  {
+    path: '/asus-rog-rgb',
+    name: 'asus-rog-rgb',
+    component: () => import('../views/AsusRogRgbView.vue')
   }
 ]
 
