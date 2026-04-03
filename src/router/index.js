@@ -35,6 +35,11 @@ const routes = [
     path: '/yubikey-ssh-manager',
     name: 'yubikey-ssh-manager',
     component: () => import('../views/YubikeySSHManagerView.vue')
+  },
+  {
+    path: '/dynamicrypt',
+    name: 'dynamicrypt',
+    component: () => import('../views/DynamiCryptView.vue')
   }
 ]
 
