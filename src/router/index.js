@@ -25,6 +25,11 @@ const routes = [
     path: '/qmk-raw-hid-router',
     name: 'qmk-raw-hid-router',
     component: () => import('../views/QmkHidRouterView.vue')
+  },
+  {
+    path: '/dactyl-manuform-5x7',
+    name: 'dactyl-manuform-5x7',
+    component: () => import('../views/DactylManuformView.vue')
   }
 ]
 

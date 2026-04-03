@@ -156,6 +156,26 @@ qmk flash -kb artiomsu_manaball -km default</code></pre>
       </div>
     </section>
 
+    <!-- ─── RELATED ──────────────────────────────────────────────── -->
+    <section class="section reveal">
+      <div class="section-inner">
+        <p class="section-label">Related projects</p>
+        <h2 class="section-title">Part of a larger ecosystem</h2>
+        <div class="related-grid">
+          <router-link to="/qmk-raw-hid-router" class="related-card">
+            <h3>QMK Raw HID Router</h3>
+            <p>The bridge that lets your keyboard control this trackball in real time — change DPI, scroll speed, and LED effects via keyboard shortcuts.</p>
+            <span class="related-arrow">View project →</span>
+          </router-link>
+          <router-link to="/dactyl-manuform-5x7" class="related-card">
+            <h3>Dactyl Manuform 5×7</h3>
+            <p>The handwired split keyboard designed to pair with this trackball. Both controlled through the QMK Raw HID Router.</p>
+            <span class="related-arrow">View project →</span>
+          </router-link>
+        </div>
+      </div>
+    </section>
+
   </div>
 </template>
 
@@ -847,6 +867,47 @@ onUnmounted(() => {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ── Related ─────────────────────────────────────────────────── */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.related-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: border-color var(--transition);
+}
+
+.related-card:hover { border-color: var(--color-hover-border); }
+
+.related-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.related-card p {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.related-arrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-accent-text);
 }
 
 /* ── Responsive ─────────────────────────────────────────────── */

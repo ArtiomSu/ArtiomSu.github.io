@@ -222,6 +222,11 @@ sudo udevadm trigger</code></pre>
             <p>The open-source 3D-printable RGB trackball that uses this router for real-time DPI, scroll speed, and LED configuration.</p>
             <span class="related-arrow">View project →</span>
           </router-link>
+          <router-link to="/dactyl-manuform-5x7" class="related-card">
+            <h3>Dactyl Manuform 5×7</h3>
+            <p>The handwired split ergonomic keyboard that pairs with the Mana Ball — uses this router to send control packets to the trackball.</p>
+            <span class="related-arrow">View project →</span>
+          </router-link>
         </div>
       </div>
     </section>
