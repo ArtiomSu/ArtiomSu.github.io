@@ -67,6 +67,7 @@ const links = [
   { to: '/macropad-pico', label: 'MacroPad' },
   { to: '/ssupss', label: 'SSUPSS' },
   { to: '/asus-rog-rgb', label: 'ROG RGB' },
+  { to: '/pi-access-point', label: 'Pi AP+VPN' },
   { to: '/yubikey-ssh-manager', label: 'YubiKey SSH' },
   { to: '/dynamicrypt', label: 'DynamiCrypt' },
 ]

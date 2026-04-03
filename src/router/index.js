@@ -55,6 +55,11 @@ const routes = [
     path: '/asus-rog-rgb',
     name: 'asus-rog-rgb',
     component: () => import('../views/AsusRogRgbView.vue')
+  },
+  {
+    path: '/pi-access-point',
+    name: 'pi-access-point',
+    component: () => import('../views/PiAccessPointView.vue')
   }
 ]
 
