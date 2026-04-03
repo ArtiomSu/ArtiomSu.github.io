@@ -20,6 +20,11 @@ const routes = [
     path: '/mana-ball-track-ball',
     name: 'mana-ball-track-ball',
     component: () => import('../views/ManaBallTrackballView.vue')
+  },
+  {
+    path: '/qmk-raw-hid-router',
+    name: 'qmk-raw-hid-router',
+    component: () => import('../views/QmkHidRouterView.vue')
   }
 ]
 

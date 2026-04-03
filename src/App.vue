@@ -36,6 +36,7 @@ const links = [
   { to: '/', label: 'Home', exact: true },
   { to: '/bluetooth-to-kb-input', label: 'BtKBi' },
   { to: '/mana-ball-track-ball', label: 'Mana Ball' },
+  { to: '/qmk-raw-hid-router', label: 'QMK HID Router' },
 ]
 
 const isDark = ref(false)

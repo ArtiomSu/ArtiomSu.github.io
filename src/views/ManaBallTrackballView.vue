@@ -132,7 +132,7 @@ qmk flash -kb artiomsu_manaball -km default</code></pre>
           </div>
           <div class="firmware-card">
             <h3>Configuration</h3>
-            <p>Adjust pointer speed, scroll behaviour, LED effects and more using the <a href="https://github.com/ArtiomSu/QMK-Raw-HID-Router" target="_blank" rel="noopener" class="link">QMK RAW HID Router</a>. Works on Windows, Linux, and macOS.</p>
+            <p>Adjust pointer speed, scroll behaviour, LED effects and more using the <router-link to="/qmk-raw-hid-router" class="link">QMK RAW HID Router</router-link>. Works on Windows, Linux, and macOS.</p>
           </div>
         </div>
       </div>
@@ -145,7 +145,7 @@ qmk flash -kb artiomsu_manaball -km default</code></pre>
         <h2 class="section-title">Why Mana Ball?</h2>
         <blockquote class="quote">
           <p>After years of testing various trackballs, none perfectly suited my needs. While the Ploopy Adept came close after modifications, its button layout still wasn't ideal. The Mana Ball is my solution — a trackball designed specifically for my workflow, with modularity built in so others can adapt it to theirs.</p>
-          <p>Best used with a QMK-enabled keyboard or macro pad configured with <a href="https://github.com/ArtiomSu/QMK-Raw-HID-Router" target="_blank" rel="noopener" class="link">QMK RAW HID Router Software</a> for full customization capabilities.</p>
+          <p>Best used with a QMK-enabled keyboard or macro pad configured with <router-link to="/qmk-raw-hid-router" class="link">QMK RAW HID Router Software</router-link> for full customization capabilities.</p>
         </blockquote>
         <div class="spec-grid">
           <div v-for="s in specs" :key="s.label" class="spec-card">
