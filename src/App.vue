@@ -68,6 +68,7 @@ const links = [
   { to: '/ssupss', label: 'SSUPSS' },
   { to: '/asus-rog-rgb', label: 'ROG RGB' },
   { to: '/pi-access-point', label: 'Pi AP+VPN' },
+  { to: '/qmk-prog-buttons', label: 'QMK Prog' },
   { to: '/yubikey-ssh-manager', label: 'YubiKey SSH' },
   { to: '/dynamicrypt', label: 'DynamiCrypt' },
 ]

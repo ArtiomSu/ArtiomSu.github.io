@@ -60,6 +60,11 @@ const routes = [
     path: '/pi-access-point',
     name: 'pi-access-point',
     component: () => import('../views/PiAccessPointView.vue')
+  },
+  {
+    path: '/qmk-prog-buttons',
+    name: 'qmk-prog-buttons',
+    component: () => import('../views/QmkProgrammableButtonsView.vue')
   }
 ]
 
