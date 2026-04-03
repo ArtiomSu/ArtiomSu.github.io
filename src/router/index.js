@@ -30,6 +30,11 @@ const routes = [
     path: '/dactyl-manuform-5x7',
     name: 'dactyl-manuform-5x7',
     component: () => import('../views/DactylManuformView.vue')
+  },
+  {
+    path: '/yubikey-ssh-manager',
+    name: 'yubikey-ssh-manager',
+    component: () => import('../views/YubikeySSHManagerView.vue')
   }
 ]
 
