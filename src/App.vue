@@ -69,6 +69,7 @@ const links = [
   { to: '/asus-rog-rgb', label: 'ROG RGB' },
   { to: '/pi-access-point', label: 'Pi AP+VPN' },
   { to: '/qmk-prog-buttons', label: 'QMK Prog' },
+  { to: '/tp-link-tapo', label: 'Tapo Tools' },
   { to: '/yubikey-ssh-manager', label: 'YubiKey SSH' },
   { to: '/dynamicrypt', label: 'DynamiCrypt' },
 ]

@@ -65,6 +65,11 @@ const routes = [
     path: '/qmk-prog-buttons',
     name: 'qmk-prog-buttons',
     component: () => import('../views/QmkProgrammableButtonsView.vue')
+  },
+  {
+    path: '/tp-link-tapo',
+    name: 'tp-link-tapo',
+    component: () => import('../views/TpLinkTapoView.vue')
   }
 ]
 
