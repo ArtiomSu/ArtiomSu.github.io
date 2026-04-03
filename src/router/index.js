@@ -45,6 +45,11 @@ const routes = [
     path: '/macropad-pico',
     name: 'macropad-pico',
     component: () => import('../views/MacropadView.vue')
+  },
+  {
+    path: '/ssupss',
+    name: 'ssupss',
+    component: () => import('../views/SsupssView.vue')
   }
 ]
 
