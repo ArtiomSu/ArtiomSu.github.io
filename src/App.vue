@@ -116,9 +116,12 @@ function toggleTheme() {
 
 onMounted(() => {
   isDark.value = resolveIsDark()
-  autoOpenTimer = setTimeout(() => {
-    if (!userToggled) menuOpen.value = true
-  }, 3000)
+  const isDesktop = window.matchMedia('(pointer: fine) and (hover: hover)').matches
+  if (isDesktop) {
+    autoOpenTimer = setTimeout(() => {
+      if (!userToggled) menuOpen.value = true
+    }, 3000)
+  }
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
     if (!localStorage.getItem('theme')) {
       isDark.value = getSystemDark()

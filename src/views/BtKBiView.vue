@@ -95,6 +95,19 @@
             </router-link>
           </div>
           <p class="affiliate-note">* AliExpress affiliate link</p>
+
+          <div class="optional-hardware">
+            <p class="optional-hardware-label">Optional adapters</p>
+            <p class="optional-hardware-desc">Skip the cable — plug BtKBi directly into a port like a USB stick.</p>
+            <div class="optional-hardware-links">
+              <a href="https://s.click.aliexpress.com/e/_c3zcuPIp" target="_blank" rel="noopener sponsored" class="optional-hardware-link">
+                USB-C male → USB-C male ↗
+              </a>
+              <a href="https://s.click.aliexpress.com/e/_c4dL0h5r" target="_blank" rel="noopener sponsored" class="optional-hardware-link">
+                USB-A male → USB-C male ↗
+              </a>
+            </div>
+          </div>
         </div>
         <div class="hardware-image-wrap">
           <img src="/btkbi/images/colour-options.jpg" alt="3D-printed case colour options" class="hardware-image" />
@@ -637,6 +650,54 @@ onMounted(() => {
 .affiliate-note {
   font-size: 0.7rem;
   color: var(--color-text-faint);
+}
+
+.optional-hardware {
+  margin-top: 24px;
+  padding: 16px 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+}
+
+.optional-hardware-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.optional-hardware-desc {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.optional-hardware-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.optional-hardware-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-accent-text);
+  border: 1px solid var(--color-accent-border);
+  border-radius: 6px;
+  background: var(--color-accent-dim);
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+
+.optional-hardware-link:hover {
+  opacity: 0.75;
 }
 
 .hardware-image-wrap {
